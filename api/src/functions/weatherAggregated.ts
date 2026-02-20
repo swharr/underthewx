@@ -42,6 +42,8 @@ app.http("weatherAggregated", {
         uvIndex: latest.aggUvIndex,
         feelsLikeF: latest.aggFeelsLikeF,
         frostRisk: latest.frostRisk as FrostRisk,
+        ...(latest.estSoilTempF !== undefined && { estSoilTempF: latest.estSoilTempF }),
+        ...(latest.estSoilMoisturePct !== undefined && { estSoilMoisturePct: latest.estSoilMoisturePct }),
       },
       stations: {
         tempest: safeParse(latest.tempestJson),

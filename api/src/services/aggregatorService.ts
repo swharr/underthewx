@@ -104,6 +104,62 @@ export function aggregate(inputs: {
   const solarWm2 = wavg("solarWm2");
   const dewPointF = wavg("dewPointF");
 
+  // ── Soil temperature estimation ──────────────────────────────────────────
+  // Interpolate/extrapolate from USU stations to home elevation using:
+  //   - Soil temp lapse rate: ~1°F per 500 ft (0.002°F/ft), shallower than air
+  //   - Inverse-distance weighting by elevation difference
+  // Only computed when at least one live USU station has soil temp data.
+  function estimateSoil(): { soilTempF?: number; soilMoisturePct?: number } {
+    const SOIL_LAPSE_RATE = 1 / 500; // °F per foot of elevation change
+
+    const candidatesTemp: Array<{ tempF: number; weight: number }> = [];
+    const candidatesMoist: Array<{ pct: number; weight: number }> = [];
+
+    // Build candidates from both USU stations
+    const usuSources = [
+      inputs.usu16,
+      inputs.usu1302734,
+    ] as const;
+
+    // Soil temp changes slowly (hours, not minutes) — allow up to 2 hours stale
+    const SOIL_STALE_MS = 2 * 60 * 60 * 1000;
+    function isSoilStale(r: StationReading): boolean {
+      return Date.now() - new Date(r.timestamp).getTime() > SOIL_STALE_MS;
+    }
+
+    for (const src of usuSources) {
+      if (!src || isSoilStale(src)) continue;
+      const elevDiff = Math.abs(src.elevationFt - HOME_ELEVATION_FT);
+      // Inverse-distance weight: closer stations count more. Add 1 to avoid div/0.
+      const w = 1 / (elevDiff + 1);
+      // Adjust soil temp to home elevation (warmer at lower elevations)
+      if (src.soilTempF != null) {
+        const adjusted = src.soilTempF + (src.elevationFt - HOME_ELEVATION_FT) * SOIL_LAPSE_RATE;
+        candidatesTemp.push({ tempF: adjusted, weight: w });
+      }
+      if (src.soilMoisturePct != null) {
+        // Moisture doesn't have a meaningful elevation correction — use raw value
+        candidatesMoist.push({ pct: src.soilMoisturePct, weight: w });
+      }
+    }
+
+    if (candidatesTemp.length === 0 && candidatesMoist.length === 0) return {};
+
+    const totalWt = candidatesTemp.reduce((s, c) => s + c.weight, 0);
+    const totalWm = candidatesMoist.reduce((s, c) => s + c.weight, 0);
+
+    return {
+      soilTempF: totalWt > 0
+        ? Math.round(candidatesTemp.reduce((s, c) => s + c.tempF * c.weight, 0) / totalWt * 10) / 10
+        : undefined,
+      soilMoisturePct: totalWm > 0
+        ? Math.round(candidatesMoist.reduce((s, c) => s + c.pct * c.weight, 0) / totalWm * 10) / 10
+        : undefined,
+    };
+  }
+
+  const { soilTempF: estSoilTempF, soilMoisturePct: estSoilMoisturePct } = estimateSoil();
+
   const homeLocation: AggregatedReading["homeLocation"] = {
     tempF: Math.round(tempF * 10) / 10,
     dewPointF: Math.round(dewPointF * 10) / 10,
@@ -119,6 +175,8 @@ export function aggregate(inputs: {
     uvIndex: Math.round(wavg("uvIndex", true) * 10) / 10,
     feelsLikeF: feelsLike(tempF, humidity, windSpeedMph),
     frostRisk: computeFrostRisk(tempF, dewPointF, solarWm2, windSpeedMph),
+    ...(estSoilTempF !== undefined && { estSoilTempF }),
+    ...(estSoilMoisturePct !== undefined && { estSoilMoisturePct }),
   };
 
   // Attach stale flag to original readings

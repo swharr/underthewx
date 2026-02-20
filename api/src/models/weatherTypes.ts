@@ -40,6 +40,10 @@ export interface AggregatedReading {
     uvIndex: number;
     feelsLikeF: number;
     frostRisk: FrostRisk;
+    /** Estimated soil temp at home elevation (10" depth), interpolated from USU stations */
+    estSoilTempF?: number;
+    /** Estimated soil moisture at home elevation, interpolated from USU stations */
+    estSoilMoisturePct?: number;
   };
   stations: {
     tempest?: StationReading;

@@ -71,6 +71,8 @@ app.timer("collectWeather", {
       aggUvIndex: hl.uvIndex,
       aggFeelsLikeF: hl.feelsLikeF,
       frostRisk: hl.frostRisk,
+      ...(hl.estSoilTempF !== undefined && { estSoilTempF: hl.estSoilTempF }),
+      ...(hl.estSoilMoisturePct !== undefined && { estSoilMoisturePct: hl.estSoilMoisturePct }),
       tempestJson: s(tempest),
       wundergroundJson: s(wunderground),
       usu16Json: s(usu16),

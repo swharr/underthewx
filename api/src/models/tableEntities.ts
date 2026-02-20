@@ -15,6 +15,9 @@ export interface WeatherLatestEntity {
   aggUvIndex: number;
   aggFeelsLikeF: number;
   frostRisk: string;
+  // Soil estimates interpolated from USU stations (absent when no live USU data)
+  estSoilTempF?: number;
+  estSoilMoisturePct?: number;
   tempestJson: string;    // JSON.stringify(StationReading | null)
   wundergroundJson: string;
   usu16Json: string;
