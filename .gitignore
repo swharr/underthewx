@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+api/dist/
+
+# Azure Functions local settings (contains API keys)
+local.settings.json
+api/local.settings.json
+
+# Environment files (contain API keys)
+.env
+.env.local
+.env.*.local
+
+# Azure Azurite local storage
+.azurite/
+__azurite_db*
+azurite.log
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+
+# Azure Functions
+bin/
+obj/

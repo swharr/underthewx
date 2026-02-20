@@ -1,0 +1,16 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "TEMPEST_API_TOKEN": "",
+    "TEMPEST_STATION_ID": "189439",
+    "WU_API_KEY": "",
+    "WU_STATION_ID": "KUTLINDO32",
+    "AZURE_STORAGE_CONNECTION_STRING": "UseDevelopmentStorage=true",
+    "KEY_VAULT_URI": "",
+    "HOME_ELEVATION_FT": "4623",
+    "HOME_FROST_DATE_SPRING": "04-25",
+    "HOME_FROST_DATE_FALL": "10-05"
+  }
+}

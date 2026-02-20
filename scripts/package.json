@@ -1,0 +1,22 @@
+{
+  "name": "underthewx-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "import-planting": "ts-node import-planting-data.ts",
+    "seed-storage": "ts-node seed-table-storage.ts",
+    "verify-stations": "ts-node verify-stations.ts"
+  },
+  "dependencies": {
+    "@azure/data-tables": "^13.2.2",
+    "@azure/identity": "^4.4.0",
+    "@types/dotenv": "^6.1.1",
+    "dotenv": "^17.3.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.0"
+  }
+}
