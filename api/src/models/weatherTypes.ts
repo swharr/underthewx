@@ -17,7 +17,10 @@ export interface StationReading {
   feelsLikeF: number;
   elevationFt: number;
   stale: boolean;
-  raw?: Record<string, unknown>;
+  // Soil data (USU FGNET stations only)
+  soilTempF?: number;      // at 10" depth
+  soilMoisturePct?: number; // volumetric water content %
+  leafWetPct?: number;     // leaf wetness %
 }
 
 export interface AggregatedReading {

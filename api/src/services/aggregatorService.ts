@@ -74,13 +74,25 @@ export function aggregate(inputs: {
     normalized: s.reading ? norm(s.reading) : null,
   }));
 
-  // Weighted average of each field
-  function wavg(field: keyof Pick<StationReading, "tempF" | "dewPointF" | "humidity" |
-    "pressureInHg" | "windSpeedMph" | "windDirDeg" | "windGustMph" |
-    "precipRateInHr" | "precipTodayIn" | "solarWm2" | "uvIndex">): number {
-    return normalized.reduce((sum, s) => {
-      if (!s.normalized || s.weight === 0) return sum;
-      return sum + (s.normalized[field] as number) * s.weight;
+  // Weighted average of each field.
+  // For fields where some stations report 0 as "not available" (pressure, uvIndex),
+  // we use only stations that have a non-zero value to avoid dragging down the average.
+  function wavg(
+    field: keyof Pick<StationReading, "tempF" | "dewPointF" | "humidity" |
+      "pressureInHg" | "windSpeedMph" | "windDirDeg" | "windGustMph" |
+      "precipRateInHr" | "precipTodayIn" | "solarWm2" | "uvIndex">,
+    skipZero = false
+  ): number {
+    const contributors = normalized.filter((s) => {
+      if (!s.normalized || s.weight === 0) return false;
+      if (skipZero && (s.normalized[field] as number) === 0) return false;
+      return true;
+    });
+    if (contributors.length === 0) return 0;
+    // Re-normalize weights among contributors only
+    const totalW = contributors.reduce((sum, s) => sum + s.weight, 0);
+    return contributors.reduce((sum, s) => {
+      return sum + (s.normalized![field] as number) * (s.weight / totalW);
     }, 0);
   }
 
@@ -94,14 +106,15 @@ export function aggregate(inputs: {
     tempF: Math.round(tempF * 10) / 10,
     dewPointF: Math.round(dewPointF * 10) / 10,
     humidity: Math.round(humidity),
-    pressureInHg: Math.round(wavg("pressureInHg") * 100) / 100,
+    // Only average pressure from stations that actually report it (skipZero=true)
+    pressureInHg: Math.round(wavg("pressureInHg", true) * 100) / 100,
     windSpeedMph: Math.round(windSpeedMph * 10) / 10,
     windDirDeg: Math.round(wavg("windDirDeg")),
     windGustMph: Math.round(wavg("windGustMph") * 10) / 10,
     precipRateInHr: Math.round(wavg("precipRateInHr") * 1000) / 1000,
     precipTodayIn: Math.round(wavg("precipTodayIn") * 100) / 100,
     solarWm2: Math.round(solarWm2),
-    uvIndex: Math.round(wavg("uvIndex") * 10) / 10,
+    uvIndex: Math.round(wavg("uvIndex", true) * 10) / 10,
     feelsLikeF: feelsLike(tempF, humidity, windSpeedMph),
     frostRisk: computeFrostRisk(tempF, dewPointF, solarWm2, windSpeedMph),
   };

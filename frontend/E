@@ -1,0 +1,2618 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+   		<title>MCHD Quickview</title>
+
+        
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Utah State university, Logan Utah" />
+<meta name="keywords" content="USU, Utah State University, Logan Utah" />
+<meta name="author" content="Utah State University - 2022" /><meta name="language" content="en" />
+<meta name="robots" content="follow, all" />
+<meta name="revisit-after" content="5 days" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="/favicon.ico" />
+<script nonce="BJpK5hRbe4M9/gbI3Gestw==" type="text/javascript" src="/resources/static/jquery/jquery-3.6.0.min.js"></script>
+<script nonce="BJpK5hRbe4M9/gbI3Gestw==">
+    function DomHelper() {
+    this.addClass = function(elem, cls) {
+        elem.className += " " + cls;
+    }
+
+    this.removeClass = function(elem, cls) {
+        var reg = new RegExp('(^| )'+cls+'($| )','g');
+        elem.className = elem.className.replace(reg, " ");
+    }
+
+    this.hasClass = function(elem, cls) {
+        return(' '+elem.className + ' ').replace(/[\n\t]/g, " ").indexOf(' ' + cls+ ' ') > -1;
+    }
+
+    this.removeContent = function(elem) {
+        elem.innerHTML = "";
+    }
+    this.deleteContent = function(elem){
+        elem.parentNode.removeChild(elem);
+    }
+    this.toggleClass = function(elem, cls){
+        if (!this.hasClass(elem, cls)){
+            this.addClass(elem, cls);
+        } else {
+            this.removeClass(elem, cls);
+        }
+	}
+	
+	this.onDOMLoad = function(doc, func) {
+		if(doc.readyState === "loading") {
+			// the DOM is still loaded, so we add a listener to the "DOMContentLoaded" event 
+			doc.addEventListener("DOMContentLoaded", func);
+		} else {
+			// "DOMContentLoaded" event has already fired, so we can just run the function
+			func();
+		}
+	}
+}</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script nonce="BJpK5hRbe4M9/gbI3Gestw==" type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=UA-51004710-1"></script>
+<script nonce="BJpK5hRbe4M9/gbI3Gestw==" type="text/javascript">
+    if(window.location.hostname == "climate.usu.edu"){
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-51004710-1', {
+            send_page_view: true
+        });
+    }
+</script>
+<script nonce="BJpK5hRbe4M9/gbI3Gestw==" type="text/javascript" src="/resources/js/global/hamburger.js?v=1.0.4"></script>
+<style>
+    /**
+ * @author Jacob Adams jacob.adams@logansw.com
+ * @date 2018-05-08
+ * 
+ * main styling page for documentation page
+*/
+
+/* Browser reset defaults */
+html, div, span, applet, 
+object, iframe, h1, h2, 
+h3, h4, h5, h6, p, 
+blockquote, pre, a, abbr,
+acronym, address, big,
+cite, code, del, dfn, em, 
+font, img, ins, kbd, q, 
+s, samp, small, strike, 
+strong, sub, sup, tt, var,
+b, u, i, center, dl, dt,
+dd, ol, ul, li, fieldset,
+form, label, legend, table, 
+caption, tbody, tfoot, 
+thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    background: transparent;
+    font-family: "Arial", "Geneva";
+    line-height: 1.3rem;
+}
+
+h1, h2, h3, 
+h4, h5, h6 {
+    font-weight: normal;
+}
+
+a:focus {  
+    background-color: #E5E5E5; 
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table { 
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+}
+
+blockquote:before, 
+blockquote:after,
+q:before, 
+q:after {
+    content: "";
+}
+
+blockquote, q{ 
+    quotes: "" "";
+}
+
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    height: 100%;
+    line-height: 1;
+}
+
+a:hover { 
+    color: #3399cc;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+h1 { 
+    font-size: 2rem; 
+}
+
+h2 { 
+    font-size: 1.5rem; 
+}
+
+h3 { 
+    font-size: 1.17rem; 
+}
+
+h4 { 
+    font-size: 1.12rem; 
+}
+
+h5 { 
+    font-size: .83rem; 
+}
+
+h6 { 
+    font-size: .75rem; 
+}
+
+p {
+    font-size: 1rem;
+}
+
+a {
+   color: #0037DB; 
+}
+
+/* clearfix */
+
+.clearfix:before, .clearfix:after {
+  content: '';
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+.main-content {
+    overflow: hidden;
+    /*margin: 138px auto 0;*/
+    min-height: 800px;
+}
+
+.ucc-dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.ucc-ctn {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 750px){  
+    .main-content{
+        margin: 138px auto 0;
+    }
+}
+
+@media only screen and (min-width: 1125px){  
+    .main-content{
+        margin: 104px auto 0;
+    }
+}
+
+@media only screen and (min-width: 1600px){  
+    .main-content{
+        max-width: 2400px;
+        margin: 104px auto 0;
+    }
+}
+/* --- nav-bar CSS --- */
+/* IE9  */
+html>/**/body .nav-bar{ 
+    background-color: #0F2439;
+}
+.hidden{
+    display: none;
+}
+.nav-bar{
+    font-family: sans-serif;
+    background-color: #0F2439;
+    margin: 0px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    transition-property: all;
+    transition: .3s;
+    min-height: 104px;
+}
+
+.nav-bar a{
+    float:left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.nav-bar .logo img{
+    width: 168px;
+}
+.drop-down, .anchor-option{
+    display: inline-block;
+    overflow: hidden;
+    line-height: 1.1rem;
+}
+
+.nav-bar .drop-down .drop-btn, .nav-bar .anchor-option .drop-btn{
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px;
+    background-color: transparent;
+    font-family: inherit;
+    line-height: 1rem;
+}
+.nav-bar .drop-down .drop-btn{
+    padding: 14px 10px 14px 14px;
+}
+.nav-bar .drop-down .drop-btn::after{
+    font-size: 1.125rem;
+    content: "\25BC";
+    /* Alt tag set for screen readers.*/
+    content: "\25BC" / "";
+    padding: 0px;
+    pointer-events: none;
+}
+
+.nav-bar a:hover, .nav-bar .drop-down:hover .drop-btn, .nav-bar .anchor-option:hover .drop-btn {
+    color: white;
+    background-color: #051524;
+    cursor: pointer;
+    outline: none;
+}
+.username a{
+    font-size: 18px;
+    border-right: 2px solid white;
+}
+.menu-buttons{
+    text-align: right;
+    width: unset;
+    padding-left: 160px;
+    padding-right: 175px;
+}
+.left-buttons{
+    text-align: left;
+    position: relative;
+}
+.left-dropdowns{
+    width: 100%;
+}
+.drop-down-content{
+    display: none;
+    position: absolute;
+    background-color: #4f4f4f;
+    padding: 1px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.drop-down-content a{
+    float: none;
+    color: white;
+    padding: 12px 32px 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.drop-down .drop-down-content a:hover{
+    /*background-color: #89837a;*/
+    background-color: #3b3b3b;
+    color: white;
+}
+
+.drop-down-content.show  {
+    display: block;
+}
+
+.drop-down .drop-down-content.hide-content {
+    display: none;
+}
+
+.nav-bar .logo{
+    display: block;
+    width: 168px;
+    position: fixed;
+}
+.nav-bar .logo img{
+    width: 100%;
+}
+.nav-bar .usu-logo{
+    position: fixed;
+    right: 0;
+    top: 56px;
+    display: block;
+}
+.usu-logo img{
+    width: 175px;
+}
+.nav-bar .logo-text{
+    padding-right: 0px;
+}
+.logo:hover a, .usu-logo:hover a, .logo:active a, .usu-logo:active a, .logo:focus a, .usu-logo:focus a{
+    background-color: transparent;
+    border: none;
+}
+.hamburger-button, .nav-bar .side-bar-only{
+    display: none;
+}
+.hamburger-button:hover{
+    cursor: pointer;
+}
+.legacy-view{
+    background-color: #1E374F;
+}
+.user-interface{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    overflow: visible;
+}
+.nav-bar, .side-bar{
+    line-height: 0.75rem;
+}
+.nav-bar .loginbutton{
+    float: right;
+    font-size: 16px;
+}
+.main-content {
+    width: 100%;
+    transition-property: all;
+    transition: .3s;
+}
+
+/* Start of side-bar CSS */
+.side-bar{
+    height: 100%;
+    min-width: 0px;
+    width: 0px;
+    background: #0F2439;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 150;
+    overflow: hidden;
+    transition: min-width 0.5s;
+    -webkit-transition: min-width 0.5s;
+    color: white;
+    font-size: 3rem;
+    font-family: sans-serif;
+}
+.side-bar-open{
+    overflow: hidden;
+    min-width: 320px;
+    transition: min-width 0.5s ease-out;
+    -webkit-transition: min-width 0.5s ease-out;
+}
+.side-bar .hamburger-button{
+    color: white;
+    display: block;
+    float: right;
+    font-size: 3rem;
+    padding: 25px;
+    font-family: sans-serif;
+}
+.side-bar .menu-buttons{
+    margin-top: 68px;
+    margin-right: 0px;
+    width: 100%;
+    padding: 0px;
+}
+.side-bar .anchor-option{
+    background-color: #0F2439;
+}
+.side-bar .anchor-option .drop-btn{
+    padding-top: 12px;
+    text-align: center;
+}
+
+.side-bar .login-button{
+    position: inherit;
+}
+.side-bar .left-dropdowns{
+    width: 100%;
+    display: inline-block;
+}
+
+.side-bar .logo img{
+    max-width: 125px; 
+    position: absolute;
+    top: 32px;
+    right: 212px;
+}
+.side-bar .drop-btn{
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    background-color: #4f4f4f;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 14px 14px;
+    line-height: 1rem;
+}
+
+.side-bar .drop-btn:focus {
+    outline: none;
+}
+
+.anchor-option .drop-btn{
+    display: block;
+}
+.drop-btn a{
+    cursor: pointer;
+}
+.side-bar .hamburger-menu .drop-down, .side-bar .hamburger-menu .anchor-option{
+    width: 100%;
+    height: 45px;
+    display: block;
+    float: none;
+    line-height: 0;
+    overflow: hidden;
+}
+.side-bar .drop-down .drop-btn::after{
+    content: "\25BC";
+    content: "\25BC" / "";
+    font-size: 1.5rem;
+    position: absolute;
+    right: 12px;
+    color: white;
+}
+.side-bar .drop-down-content{
+    right: 0px;
+    background-color: #4f4f4f;
+    line-height: 1.3rem;
+    box-shadow: -2px -2px 2px 0px rgba(0,0,0,.2);
+    -webkit-box-shadow: -2px -2px 2px 0px rgba(0,0,0,.2);
+    -moz-box-shadow: -2px -2px 2px 0px rgba(0,0,0,.2);
+}
+.side-bar .drop-down-content a{
+    color: white;
+}
+.side-bar-only .drop-btn{
+    color: white;
+}
+.side-bar .user-interface{
+    position: inherit;
+    margin: auto;
+}
+.side-bar .username{
+    display: block;
+    padding: 12px;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    line-height: 0px;
+}
+.side-bar .username a{
+    padding: 0px;
+}
+.side-bar .user-interface .drop-btn{
+    width: auto;
+}
+.side-bar .user-interface .username .drop-btn{
+    max-width: 75%;
+}
+.visually-locked{
+    display: block;
+}
+
+/* Sub menu */
+.sub-drop-title::after{
+    content: "\25BC";
+    content: "\25BC" / "";
+    font-size: 1rem;
+    position: absolute;
+    right: 12px;
+    padding-top: 0px;
+}
+.sub-drop-down{
+    position: relative;
+}
+.sub-content{
+    position: absolute;
+    background-color: #474747;
+    z-index: 5;
+    border-bottom: white solid 1px;
+}
+.side-bar .sub-drop-down .sub-selected{
+    color: white;
+}
+.sub-drop-down .sub-content a{
+    color: white;
+}
+
+/* Convert */
+#climate-modal .climate-modal-content-ctn{
+    padding: 0px;
+}
+.conversion-sect{
+    width: 100%;
+}
+.conversion-head{
+    background-color: #49627A;
+}
+.conversion-head .title{
+    font-size: 18px;
+    color: white;
+    width: 100%;
+}
+.unit-conversion .content{
+    font-size: 12px;
+    color: black;
+}
+.conversion-sect input{
+    width: 60px;
+}
+.conversion-sect span{
+    margin: 6px;
+    line-height: 40px;
+}
+.reduce-margin input{
+    width: 48px;
+    margin: 0px -14px;
+}
+.convert-row{
+    font-size: 18px;
+    margin: 0px;
+    padding: 12px 0px;
+    width: 100%;
+    height: 20px;
+}
+.convert-row input, .convert-row select{
+    font-size: 18px;
+    margin: 0px 6px;
+}
+.convert-text{
+    color: black;
+    font-size: 12px;
+}
+.read-only{
+    text-align: center;
+}
+/* End of Side-Bar CSS */
+
+/* Fader CSS */
+#fader {
+    background: #051524;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .6s;
+    pointer-events: none;
+}
+#fader.opaque{
+    display: block;
+    opacity: 80%;
+    /* animation-name: showfader;
+    animation-duration: .6s; */
+    z-index: 125;
+    pointer-events: auto;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 900px){  
+    .nav-bar .usu-logo{
+        display: none;
+    }
+}
+@media only screen and (max-width: 750px){
+    .nav-bar{
+        min-height: auto;
+    }
+    .nav-bar .drop-down, .nav-bar .usu-logo, .nav-bar .anchor-option{
+        display: none;
+    }
+    .username{
+        display: none;
+    }
+    .nav-bar .logo img{
+        width: 66px;
+    }
+    .main-content{
+        margin-top: 70px;
+    }
+
+    /*allows the navbar to disappear off the top of the screen*/
+    .nav-bar-hide{
+        top: -70px; 
+    }
+
+    .nav-bar .hamburger-button{
+        display: block;
+        float: right;
+        line-height: 1.3rem;
+        font-size: 3rem;
+        padding: 25px;
+    }
+    .main-content-nav-bar-hide{
+        margin-top: 0px;
+    }
+    .user-interface{
+        width: 100%;
+    }
+    
+    @supports (-webkit-touch-callout: none) {
+        .nav-bar-hide {
+            top: 0;
+        }
+
+        .main-content-nav-bar-hide{
+            margin-top: 70px;
+        }
+    }
+}
+@media (min-width: 750px){
+    .sub-drop-title::after{
+        content: "\25B6";
+    }
+    .sub-content{
+        width: 100%;
+        right: -100%;
+        top: 0px;
+    }
+    .drop-down:hover .drop-down-content {
+        display: block;
+    }
+    .sub-content{
+        background-color: #474747;
+    }
+}
+.call-to-arms {
+    font-size: 32px;
+    display: inline-block;
+    margin: 16px 50px 32px;
+    padding: 8px;
+    background: #0F2439;
+    width: 200px;
+    height: 80px; 
+    border-radius: 15px 3px;
+    filter: contrast(0.75);
+    box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.75);
+}
+.call-to-arms h4 {
+    padding: 8px;
+    color: white;
+    font-size: 1.12rem;
+}
+
+.menu-buttons .call-to-arms {
+    display: none;
+    margin: 16px 0;
+    color: white;
+    height: 40px;
+    width: 270px; 
+    padding: 0;
+    height: 55px;
+    text-align: center;
+}
+
+.side-bar .call-to-arms {
+    height: 110px;
+}
+
+.side-bar-only .menu-buttons {
+    display: inline-block;
+}
+
+a.non-nav {
+    float: initial;
+    padding: initial;
+}
+
+@media only screen and (min-width: 750px){
+    .menu-buttons .call-to-arms {
+        display: inline-block;
+    }
+}
+
+@media only screen and (min-width: 900px){  
+    .menu-buttons .call-to-arms {
+        width: 300px;
+    }
+}
+ 
+.climate-header{
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    background-color: #324B64;
+    color: white;
+    font-size: 2rem;
+    line-height: 3rem;
+}.foot-left{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    overflow: visible;
+    background-repeat: no-repeat;
+}
+.footer .social-media{
+    margin: 20px 0px;
+}
+.footer .social-media a{
+    padding: 0px 36px;
+}
+
+.social-media img {
+    max-width: 50px;
+}
+.footer a{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1;
+    color: white;
+}
+.footer {
+    position: inherit;
+    width: 100%;
+    background-color: #0F2439;
+    text-align: center;
+    display: grid;
+    min-height: 200px;
+}
+.foot-link{
+    min-width: 157px;
+    padding: 14px 16px;
+    display: inline-block;
+    margin-top: 10px;
+}
+.footer .foot-link:hover, .footer .drop-down:hover .drop-btn, .foot-link a:focus {
+    background-color: rgba(1, 9, 18, .7);
+    cursor: pointer;
+}
+.footer a:hover{
+    color: white;
+}
+.footer a:focus{
+    color: white;
+    background-color: rgba(1, 9, 18, .9);
+    outline: 1px solid white;
+}
+
+@media screen and (max-device-width: 765px){
+    .foot-link{
+        margin: 1px;
+    }
+    .footer a{
+        font-size: 1rem;
+    }
+    .social-media img{
+        width: 10%;
+        max-width: 50px;
+    }
+}
+.thunder-button, .thunder-button-blue, .thunder-button-dgrey,
+.thunder-button-grey, .thunder-button-lgrey, .thunder-button-white {
+    /*Default settings*/
+    background-color: #766F65;
+    border: none;
+    color: white;
+    padding: 12px 18px;
+    text-align: center;
+    text-decoration: unset;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.25s;
+    box-shadow: 3px 2px 5px rgba(0, 0, 0, .5);
+}
+.thunder-button:hover, .thunder-button-blue:hover, .thunder-button-blue-inv, .thunder-button-dgrey:hover, .thunder-button-dgrey-inv,
+.thunder-button-grey:hover, .thunder-button-grey-inv, .thunder-button-lgrey:hover, .thunder-button-lgrey-inv, .thunder-button-white:hover, .thunder-button-white-inv {
+    /*Default settings for hover*/
+    color: white;
+    border: none;
+    background-color: #0F2439;
+    transition: 0.125s;
+    padding: 12px 18px;
+    text-align: center;
+    text-decoration: unset;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, .3);
+    transition: 0.25s;
+}
+.thunder-button:active, .thunder-button-blue:active, .thunder-button-blue-inv:active, .thunder-button-dgrey:active, .thunder-button-dgrey-inv:active,
+.thunder-button-grey:active, .thunder-button-grey-inv:active, .thunder-button-lgrey:active, .thunder-button-lgrey-inv:active, .thunder-button-white:active, .thunder-button-white-inv:active {
+    box-shadow: 3px 2px 5px rgba(0, 0, 0, .5);
+    transition: 0.25s;
+}
+.thunder-button-blue {
+    background-color: #0F2439;
+}
+.thunder-button-blue:hover, .thunder-button-blue-inv {
+    background-color: #1E374F;
+}
+.thunder-button-dgrey:hover, .thunder-button-dgrey-inv {
+    background-color: #9D968D;
+    color: white;
+}
+.thunder-button-grey{
+    background-color: rgba(197, 191, 184, 1);
+    color: white;
+}
+.thunder-button-grey:hover, .thunder-button-grey-inv {
+    background-color: rgba(197, 191, 184, .7);
+    color: white;
+}
+.thunder-button-lgrey{
+    background-color: rgba(246, 242, 237, 1);
+    color: black;
+}
+.thunder-button-lgrey:hover, .thunder-button-lgrey-inv {
+    color: black;
+    background-color: rgba(246, 242, 237, 0.6);
+}
+.thunder-button-white, .thunder-button-white:hover,
+.thunder-button-white-inv {
+    color: black;
+    background-color: rgba(0, 0, 0, 0);
+}</style>
+
+
+        <link href="/style/new_climateStyle.css" rel="stylesheet" type="text/css" />
+        <link href="/style/master.css" rel="stylesheet" type="text/css" />
+        <link href="/style/home.css" rel="stylesheet" type="text/css" />
+        <link href="/style/slider.css" rel="stylesheet" type="text/css" />
+        <style>
+            .climate-modal {
+    display: block;
+    background-color: rgba(0, 0, 0, .75);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+}
+
+.climate-modal .climate-modal-ctn {
+    background: #fff;
+    min-height: 400px;
+    min-width: 300px;
+    max-width: 80%;
+    width: 50%;
+    margin: 120px auto;
+    left: 0;
+    right: 0;
+    -webkit-box-shadow: 10px 10px 20px 0px rgba(0,0,0,.8);
+    -moz-box-shadow: 10px 10px 20px 0px rgba(0,0,0,.8);
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,.8);
+}
+
+.climate-modal .climate-modal-header {
+    background: #1E374F;
+    color: #fff;
+    position: relative;
+    height: 3.5rem;
+}
+
+.climate-modal .climate-modal-header h1,
+.climate-modal .climate-modal-header h2,
+.climate-modal .climate-modal-header h3 {
+    position: absolute;
+    bottom: 50%;
+    top: 25%;
+    width: 100%;
+    font-size: 1.75rem;
+    color:white;
+}
+
+.climate-modal .climate-modal-escape {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    z-index: 21;
+    -webkit-box-shadow: 3px 3px 8px 0px rgba(0,0,0,.8);
+    -moz-box-shadow: 3px 3px 8px 0px rgba(0,0,0,.8);
+    box-shadow: 3px 3px 8px 0px rgba(0,0,0,.8);
+    color: #fff;
+    background: #49627A;
+    height: 2rem;
+    width: 2rem;
+    line-height: 1.75rem;
+    border-radius: 2px;
+}
+
+.climate-modal .climate-modal-escape:hover {
+    cursor: pointer;
+    -webkit-box-shadow: inset 0px 0px 7px 5px rgba(255,255,255,0.25);
+    -moz-box-shadow: inset 0px 0px 7px 5px rgba(255,255,255,0.25);
+    box-shadow: inset 0px 0px 7px 5px rgba(255,255,255,0.25);
+}
+
+.climate-modal .climate-modal-content-ctn {
+    padding: 1rem;
+}
+
+.climate-modal.modal-hide {
+    display: none;
+}.error-msg {
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+        </style>
+
+        <script nonce="BJpK5hRbe4M9/gbI3Gestw==" type="text/javascript" src="/support/ThunderGrid/js/ThunderGrid.js"></script>
+
+        <script nonce="BJpK5hRbe4M9/gbI3Gestw==" type="text/javascript" src="/js/hamburger.js"></script>
+        <link href="/support/ThunderGrid/css/thunder-grid.css" rel="stylesheet" type="text/css"/>
+        <link href="quickview.css?v=3.0.4" rel="stylesheet" type="text/css"/>
+
+        <script nonce="BJpK5hRbe4M9/gbI3Gestw==">
+            function Communication() {
+    this.runAjax = function(srcUrl, successHandler, failHandler) {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4) { 
+                if (xmlhttp.status == 404) {
+                    failHandler();
+                } else {
+                    var json = JSON.parse(xmlhttp.responseText);
+                    if(json.success === true) {
+                        successHandler(json);
+                    } else {
+                        failHandler(json);
+                    }
+                }
+            }
+        };
+
+        xmlhttp.open("GET", srcUrl, true);
+        xmlhttp.send();
+    }
+}
+function UrlParamParser() {
+    this.parameters = [];
+    this.url = window.location.href;
+    this.error;
+    
+    this.addParameter = function (pair) {
+        var parameterKeyValue = pair.split("=");
+        this.parameters[decodeURIComponent(parameterKeyValue[0])] = decodeURIComponent(parameterKeyValue[1]);
+    }
+
+    this.parseUrl = function() {
+        var pairs = this.getKeyValuePairs();
+        if(pairs === false) {
+            return false;
+        }
+
+        for(var i=0; i<pairs.length; ++i) {
+            this.addParameter(pairs[i]);
+        }
+
+        return true;
+    }
+
+    this.getStartPosition = function() {
+        return this.url.indexOf('?') + 1;
+    }
+
+    this.getKeyValuePairs = function() {
+        var options = this.url.slice(this.getStartPosition(), this.url.length);
+        if(options === this.url || options === "") {
+            this.error = "Invalid url to parse. Are there parameters?";
+            return false;
+        }
+        return options.replace(/\+/g, " ").split("&");
+    }
+}function MchdUrl() {
+    UrlParamParser.call(this);
+    this.units;
+    this.startDate;
+    this.endDate;
+    this.network;
+    this.stationId;
+    this.showGraph;
+    this.parsed = false;
+
+    this.getParameterValue = function (pair) {
+        split = pair.split("=");
+        return decodeURIComponent(split[1]);
+    }
+
+    this.parseUrl = function() {
+        this.parsed = MchdUrl.prototype.parseUrl.call(this);
+
+        if(!this.parsed) {
+            throw Error("Couldn't parse the url");
+        }
+
+        // sets all object attributes
+        this.network = this.parameters["network"];
+        this.stationId = this.parameters["station"];
+        this.startDate = this.parameters["startdate"];
+        this.endDate = this.parameters["enddate"];
+        this.units = this.parameters["units"];
+        this.showGraph = this.parameters["showgraph"];
+
+        this.setStartAndEndDates();
+    }
+
+    this.setStartAndEndDates = function() {
+        if(!this.startDate || !this.endDate) {
+            var now = new Date();
+            this.endDate = (new Date()).toISOString();
+            this.startDate = (new Date(now - (30 * 24 * 60 * 60 * 1000))).toISOString();
+        }
+    }
+
+    this.changeUrl = function(stationId, startDate, endDate, units, showGraph) {
+        // get the same url up to "?"
+        var currentUrl = window.location.href;
+        currentUrl = currentUrl.slice(0,currentUrl.indexOf("?") + 1);
+        if(currentUrl == "") {
+            currentUrl = window.location.href + '?';
+        }
+
+        // add each new url variable
+        currentUrl += ("network=" + this.network);
+
+        // stationId
+        if(stationId != 0) {
+            currentUrl += ("&station=" + stationId);  
+        } else {
+            currentUrl += ("&station=" + this.stationId);
+        }
+
+        // startDate
+        if(_startdate != 0){
+            currentUrl += ("&startdate=" + startDate);
+        } else{
+            currentUrl += ("&startdate=" + this.startDate);  
+        }
+
+        // endDate
+        if(_enddate != 0){
+            currentUrl += ("&enddate=" + endDate);  
+        } else{
+          currentUrl += ("&enddate=" + this.endDate);  
+        }
+
+        // units
+        if(_units != 0){
+            currentUrl += ("&units=" + units);
+        } else{
+            currentUrl += ("&units=" + this.units);
+        }
+
+        // showGraph
+        if(_showgraph   != 0){
+            currentUrl += ("&showgraph=" + showGraph);
+        } else{
+            currentUrl += ("&showgraph=" + this.showGraph);
+        }
+
+        window.location.href = currentUrl;
+    }
+}
+MchdUrl.prototype = new UrlParamParser();
+function QuickviewUrl(){
+	this.units;
+    this.network;
+    this.stationId;
+    this.parsed = false;
+
+    this.parseUrl = function() {
+        var url = window.location.href;
+        // get position where parameters start
+        var startPosition = url.indexOf('?') + 1;
+
+        // get each key value pair
+        var options = url.slice(startPosition, url.length);
+        var pairs = options.replace(/\+/g, " ").split("&");
+
+        if(options === url || options === "") {
+            throw Error("invalid url");
+        }
+
+        // sets all object attributes
+        this.network = this.getParameterValue(pairs[0]);
+        this.stationId = this.getParameterValue(pairs[1]);
+        this.units = this.getParameterValue(pairs[2]);
+        this.parsed = true;
+    }
+}
+
+QuickviewUrl.prototype = new MchdUrl();function MchdCommunication(url) {
+    this.url = url;
+    this.version = "v2";
+    this.key = "yHFfD5Ladls7vPpMYtGRD9l5e5umyK";
+    this.servicesFile = "/mchd/dashboard/mchdServices.php";
+
+    this.loadCurrent = function(successHandler, failHandler) {
+        this.runAjax(this.generateServiceQuery(18) + "&start_date=" + this.url.startDate + "&end_date=" + this.url.endDate, successHandler, failHandler);
+    }
+
+    this.loadHourly = function(successHandler, failHandler) {
+        this.runAjax(this.generateServiceQuery(19) + "&start_date=" + this.url.startDate + "&end_date=" + this.url.endDate, successHandler, failHandler);
+    }
+
+    this.loadDaily = function(successHandler, failHandler) {
+        this.runAjax(this.generateServiceQuery(20) + "&start_date=" + this.url.startDate + "&end_date=" + this.url.endDate, successHandler, failHandler);
+    }
+
+    this.loadStationInfo = function(successHandler, failHandler) {
+        this.runAjax(this.generateServiceQuery(1), successHandler, failHandler);
+    }
+
+    this.loadStationPOR = function(successHandler,failHandler){
+        this.runAjax(this.generateServiceQuery(16), successHandler, failHandler);
+    }
+
+    this.loadAllAggregatedData = function(successHandler, failHandler) {
+        this.runAjax(this.generateServiceQuery(9), successHandler, failHandler)
+    }
+
+    // this should only be used if loadAllAgregatedData fails
+    this.loadNowData = function(successHandler, failHandler) {
+        this.runAjax(this.generateServiceQuery(3), successHandler, failHandler);
+    }
+
+    // this should only be used if loadAllAgregatedData fails
+    this.loadPrecipData = function(successHandler, failHandler) {
+        this.runAjax(this.generateServiceQuery(2), successHandler, failHandler);
+    }
+
+    this.loadStationType = function(successHandler, failHandler) {
+        this.runAjax(this.generateServiceQuery(14), successHandler, failHandler);
+    }
+
+    this.generateServiceQuery = function(queryId) {
+        return this.servicesFile + "?query_id=" + queryId + "&network=" + this.url.network + '&station_id=' + this.url.stationId + '&units=' + this.url.units;
+    }
+
+    // abnormal data
+    this.loadAbnormalVars = function(successHandler, failHandler) {
+        this.runAjax(this.generateServiceQuery(10), successHandler, failHandler);
+    }
+
+    this.loadAbnormalDly = function(successHandler, failHandler) {
+         this.runAjax(this.generateServiceQuery(22) + "&start_date=" + this.url.startDate + "&end_date=" + this.url.endDate, successHandler, failHandler);
+    }
+
+    this.loadAbnormalHly = function(successHandler, failHandler) {
+         this.runAjax(this.generateServiceQuery(15) + "&start_date=" + this.url.startDate + "&end_date=" + this.url.endDate, successHandler, failHandler);
+    }
+
+    this.loadAbnormalMin = function(successHandler, failHandler) {
+        // TODO get abnormal data
+    }
+
+    this.downloadData = function(successHandler, failHandler, startDate, endDate, freq,isInMst) {
+        var url = this.generateServiceQuery(12) + "&start_date=" + startDate + "&end_date=" + endDate + "&freq=" + freq + "&mst=" + isInMst;
+        this.runAjax(url, successHandler, failHandler);
+    }
+    this.loadDecomDates = function(successHandler, failHandler){
+        this.runAjax(this.generateServiceQuery(17),successHandler,failHandler);
+    }
+}
+MchdCommunication.prototype = new Communication();
+function QuickviewCommunication(url) {
+    MchdCommunication.call(this, url);
+
+    this.loadStationInfo = function(successHandler, failHandler) {
+        this.runAjax(this.generateServiceQuery(8), successHandler, failHandler);
+    }
+
+    this.loadCurrent = function(successHandler, failHandler) {
+        this.runAjax(this.generateServiceQuery(5), successHandler, failHandler)
+    }
+
+    this.loadHourly = function(successHandler, failHandler) {
+        this.runAjax(this.generateServiceQuery(6), successHandler, failHandler);
+    }
+
+    this.loadDaily = function(successHandler, failHandler) {
+        this.runAjax(this.generateServiceQuery(7), successHandler, failHandler);
+    }
+
+    this.loadAbnormalHly = function(successHandler, failHandler) {
+        this.runAjax(this.generateServiceQuery(10), successHandler, failHandler);
+    }
+
+    this.loadAbnormalMin = function(successHandler, failHandler) {
+        this.runAjax(this.generateServiceQuery(11), successHandler, failHandler);
+    }
+}
+QuickviewCommunication.prototype = new MchdCommunication();
+function LoaderBehavior(mchdCom, successHandler, failHandler, totalToLoad) {
+    this.minuteJson;
+    this.hourlyJson;
+    this.dailyJson;
+    this.hlyAbnormal;
+    this.stationInfo;
+    this.failed = false;
+    this.successHandler = successHandler;
+    this.failHandler = failHandler;
+    this.mchdCom = mchdCom;
+    this.received = 0;
+    this.totalToLoad = totalToLoad;
+
+    this.abnormalSuccess;
+    this.abnormalFail;
+
+    var self = this;
+
+    this.loadFrequencyData = function() {
+        throw Error("Unimplemented abstract function loadData.");
+    }
+
+    this.loadFailed = function() {
+        if(self.failed === false) {
+            self.failed = true;
+            self.failHandler();
+        }
+    }
+
+    this.loadFailedIndependent = function() {
+        self.loadIndependent("failed");
+        if(self.failed === false) {
+            self.failed = true;
+            self.failHandler();
+        }
+    }
+
+    this.loadStationInfoSucc = function(data){
+        self.stationInfo = data;
+        self.loadIndependent("station");
+    }
+
+    this.loadMinuteSuc = function(data) {
+        self.minuteJson = data;
+        self.loadIndependent("minute");
+    }
+
+    this.loadHourlySuc = function(data) {
+        self.hourlyJson = data;
+        self.loadIndependent("hourly");
+    }
+
+    this.loadDailySuc = function(data) {
+        self.dailyJson = data;
+        self.loadIndependent("daily");
+    }
+
+    this.loadIndependent = function(dataReceived) {
+        if (dataReceived == "station") {
+            self.received++;
+        } else if (dataReceived == "minute") {
+            self.received++;
+        } else if (dataReceived == "hourly") {
+            self.received++;
+        } else if (dataReceived == "daily") {
+            self.received++;
+        } else if (dataReceived == "failed") {
+            self.received++;
+        }
+        if (self.received == self.totalToLoad) {
+            self.successHandler();
+        }
+    }
+}
+function AllData(mchdCom, successHandler, failHandler) {
+    LoaderBehavior.call(this, mchdCom, successHandler, failHandler, 4);
+
+    this.loadFrequencyData = function() {
+        mchdCom.loadStationInfo(this.loadStationInfoSucc,this.loadFailed);
+        mchdCom.loadCurrent(this.loadMinuteSuc, this.loadFailed);
+        mchdCom.loadHourly(this.loadHourlySuc, this.loadFailed);
+        mchdCom.loadDaily(this.loadDailySuc, this.loadFailed);
+    }
+
+    this.loadFrequencyDataIndependent = function() {
+        mchdCom.loadStationInfo(this.loadStationInfoSucc,this.loadFailedIndependent);
+        mchdCom.loadCurrent(this.loadMinuteSuc, this.loadFailedIndependent);
+        mchdCom.loadHourly(this.loadHourlySuc, this.loadFailedIndependent);
+        mchdCom.loadDaily(this.loadDailySuc, this.loadFailedIndependent);
+    }
+
+}
+AllData.proptotype = new LoaderBehavior();
+function NoMinuteLoad(mchdCom, successHandler, failHandler) {
+    LoaderBehavior.call(this, mchdCom, successHandler, failHandler, 3);
+
+    this.loadFrequencyData = function() {
+    	mchdCom.loadStationInfo(this.loadStationInfoSucc,this.loadFailed);
+        mchdCom.loadHourly(this.loadHourlySuc, this.loadFailed);
+        mchdCom.loadDaily(this.loadDailySuc, this.loadFailed);
+    }
+
+    this.loadFrequencyDataIndependent = function() {
+    	mchdCom.loadStationInfo(this.loadStationInfoSucc,this.loadFailed);
+        mchdCom.loadHourly(this.loadHourlySuc, this.loadFailedIndependent);
+        mchdCom.loadDaily(this.loadDailySuc, this.loadFailedIndependent);
+    }
+
+}
+NoMinuteLoad.proptotype = new LoaderBehavior();
+function OddVarNames(){
+	this.lookup = {
+		// Uagrimet
+	    "soilm8_ni": "Moist_8in",
+	    "soilt8_ni": "Temp_8in",
+	    "soilt4_ni": "Temp_4in",
+
+	    "soil6vwc_east25":"Moist_6in",
+	    "soil18vwc_east25":"Moist_18in",
+	    "soil36vwc_east25":"Moist_36in",
+	    "soil60vwc_east25":"Moist_60in",
+	    "soilt6_east25":"Temp_6in",
+	    "soilt18_east25":"Temp_18in",
+	    "soilt36_east25":"Temp_36in",
+	    "soilt60_east25":"Temp_60in",
+
+	    "soil6vwc_north100":"Moist_6in",
+	    "soil18vwc_north100":"Moist_18in",
+	    "soil36vwc_north100":"Moist_36in",
+	    "soil60vwc_north100":"Moist_60in",
+	    "soilt6_north100":"Temp_6in",
+	    "soilt18_north100":"Temp_18in",
+	    "soilt36_north100":"Temp_36in",
+	    "soilt60_north100":"Temp_60in",
+
+	    "soil6vwc_east100":"Moist_6in",
+	    "soil18vwc_east100":"Moist_18in",
+	    "soil36vwc_east100":"Moist_36in",
+	    "soil60vwc_east100":"Moist_60in",
+	    "soilt6_east100":"Temp_6in",
+	    "soilt18_east100":"Temp_18in",
+	    "soilt36_east100":"Temp_36in",
+	    "soilt60_east100":"Temp_60in",
+
+	    "soil6vwc_south300":"Moist_6in",
+	    "soil18vwc_south300":"Moist_18in",
+	    "soil36vwc_south300":"Moist_36in",
+	    "soil60vwc_south300":"Moist_60in",
+	    "soilt6_south300":"Temp_6in",
+	    "soilt18_south300":"Temp_18in",
+	    "soilt36_south300":"Temp_36in",
+	    "soilt60_north100":"Temp_60in",
+	    "soilt60_south100":"Temp_60in",
+	    "soilvwc18_south300":"Moist_18in",
+	    "soilt60_south300":"Temp_60in",
+
+	    //Agweather
+	   	"soil2_vwc":"Moist_2in",
+	    "soilt2_avg":"Temp_2in",
+	    "soil4vwc":"Moist_4in",
+	    "soilt4_avg":"Temp_4in",
+	    "soilvwc8_avg":"Moist_8in",
+	    "soilt8_avg":"Temp_8in",
+	    "soil20_vwc":"Moist_20in",
+	    "soilt20_avg":"Temp_20in",
+
+	    // Agweather Cornish
+	    "soilt4_i":"soilt4_i",
+	    "soilt8_i":"soilt8_i",
+	    "soilt12_i":"soilt12_i",
+	    "soilt16_i":"soilt16_i",
+	    "soilt20_i":"soilt20_i",
+	    "soilt24_i":"soilt24_i",
+	    "soilt28_i":"soilt28_i",
+        "soilt32_i":"soilt32_i",
+        "soilt36_i":"soilt36_i",
+
+	    "soilm4_i":"soilm4_i",
+	    "soilm8_i":"soilm8_i",
+	    "soilm12_i":"soilm12_i",
+	    "soilm16_i":"soilm16_i",
+	    "soilm20_i":"soilm20_i",
+	    "soilm24_i":"soilm24_i",
+	    "soilm28_i":"soilm28_i",
+	    "soilm32_i":"soilm32_i",
+	    "soilm36_i":"soilm36_i",
+
+	    //turf_soil
+	    "soilt2_i" : "soilt2_i", 
+        "soilm2_i" : "soilm2_i", 
+        "soilm4_i" : "soilm4_i", 
+        "soilt4_i" : "soilt4_i",
+
+        //LBW_soil
+        "soilm2_ni":"soilm2_ni",
+        "soilm4_ni":"soilm4_ni",
+        "soilm8_ni":"soilm8_ni",
+        "soilm20_ni":"soilm20_ni",
+        "soilm40_ni":"soilm40_ni",
+
+        "soilt2_ni":"soilt2_ni",
+        "soilt4_ni":"soilt4_ni",
+        "soilt8_ni":"soilt8_ni",
+        "soilt20_ni":"soilt20_ni",
+        "soilt40_ni":"soilt40_ni",
+
+        "soilper2_ni":"soilper2_ni",
+        "soilper4_ni":"soilper4_ni",
+        "soilper8_ni":"soilper8_ni",
+        "soilper20_ni":"soilper20_ni",
+        "soilper40_ni":"soilper40_ni",
+                     
+        "soilec2_ni":"soilec2_ni",
+        "soilec4_ni":"soilec4_ni",
+        "soilec8_ni":"soilec8_ni",
+        "soilec20_ni":"soilec20_ni",
+        "soilec40_ni":"soilec40_ni"
+	  };
+
+	this.findVarName = function(varName){
+		varName = varName.toLowerCase();
+		return this.lookup[varName];
+	}
+}
+function Modal(){
+    this.hideModalCls = "modal-hide";
+    this.modalCls = "climate-modal";
+    this.ctnCls = "climate-modal-ctn";
+    this.contentCtnCls = "climate-modal-content-ctn";
+    this.escapeBtnCls = "climate-modal-escape";
+    this.headerCls = "climate-modal-header";
+    this.headerTitleDefault = "Modal";
+    this.modalElement;
+    this.escapeBtn;
+    this.contentCtn;
+    this.ctn;
+    this.header;
+    this.headerTitle;
+    this.domHelper = new DomHelper();
+
+    this.createModal = function() {
+        this.modalElement = document.createElement("div");
+        this.domHelper.addClass(this.modalElement, this.modalCls);
+        this.modalElement.appendChild(this.createCtn());
+        return this.modalElement;
+    }
+
+    this.createCtn = function() {
+        this.ctn = document.createElement("div");
+        this.domHelper.addClass(this.ctn, this.ctnCls);
+        this.ctn.appendChild(this.createHeader());
+        this.ctn.appendChild(this.createContentCtn());
+        return this.ctn;
+    }
+
+    this.createHeader = function() {
+        this.header = document.createElement("div");
+        this.domHelper.addClass(this.header, this.headerCls);
+        this.header.appendChild(this.createTitle());
+        this.header.appendChild(this.createEscapeBtn());
+        return this.header;
+    }
+
+    this.createEscapeBtn = function() {
+        var self = this;
+        this.escapeBtn = document.createElement("i");
+        this.escapeNode = document.createTextNode("x");
+        this.escapeBtn.appendChild(this.escapeNode);
+
+        this.domHelper.addClass(this.escapeBtn, this.escapeBtnCls);
+        
+        this.escapeBtn.addEventListener("click", function(e){
+            self.deleteModal();
+        });
+
+        return this.escapeBtn;
+    }
+
+    this.createTitle = function() {
+        this.headerTitle = document.createElement("h2");
+        this.headerTitle.innerHTML = this.headerTitleDefault;
+        return this.headerTitle;
+    }
+
+    this.addTitle = function(title) {
+        this.headerTitleDefault = title;
+        this.headerTitle.innerHTML = title;
+    }
+
+    this.createContentCtn = function() {
+        this.contentCtn = document.createElement("div");
+        this.domHelper.addClass(this.contentCtn, this.contentCtnCls);
+        return this.contentCtn;
+    }
+
+    this.addContent = function(elem) {
+        this.contentCtn.appendChild(elem);
+    }
+
+    this.prependContent = function(elem) {
+        var content = [].slice.call(this.contentCtn.children);
+        this.clearContent();
+        content.unshift(elem);
+        for(var i=0; i < content.length; ++i) {
+            this.contentCtn.appendChild(content[i]);
+        }
+    }
+
+    this.clearContent = function() {
+        this.contentCtn.innerHTML = "";
+    }
+
+    this.showModal = function() {
+        this.domHelper.removeClass(this.modalElement, this.hideModalCls);
+    }
+
+    this.hideModal = function() {
+        this.domHelper.addClass(this.modalElement, this.hideModalCls);
+    }
+
+    this.deleteModal = function(){
+        this.domHelper.deleteContent(this.modalElement);
+    }
+}function MchdErrorModal() {
+    Modal.call(this);
+    this.mchdErrorCls = "mchd-error";
+    this.modalCls += " " + this.mchdErrorCls;
+
+    this.addErrorTitle = function(title) {
+        this.addTitle(title);
+    }
+
+    this.addError = function(error) {
+        error += " If this problem continues for multiple days please let us know on our <a href=\"/feedback.php\">Feedback page</a>.";
+        this.addContent(this.getElement(error));
+    }
+
+    this.prependError = function(error) {
+        modalError.prependContent(this.getElement(error));
+    }
+
+    this.getElement = function(error) {
+        var errorElem = document.createElement("p");
+        errorElem.innerHTML = error;
+        errorElem.className = "error-msg";
+        return errorElem;
+    }
+}
+MchdErrorModal.prototype = new Modal(); 
+
+function MonthModal(){
+    MchdErrorModal.call(this);
+
+    this.addError = function(error){
+        error += "  Please select a month you would like data for:";
+        var errorMessage = document.createElement("p");
+        errorMessage.setAttribute("class", "month-text");
+        errorMessage.innerHTML = error;
+        this.addContent(errorMessage);
+        var datePicker = document.createElement("div");
+        datePicker.setAttribute("id", "date-picker");
+        $(".date-form").clone().appendTo(datePicker);
+        var monthButtons = datePicker.getElementsByClassName("change-month");
+        monthButtons[0].addEventListener("click", changeMonth);
+        var monthBox = datePicker.children[0].children[0].children[0];
+        monthBox.setAttribute("class", "month-box");
+        $(monthBox).MonthPicker({
+            MaxMonth: 0,
+            MinMonth: '01/1980',
+            Button: false
+        });
+        this.addContent(datePicker);
+        //Style for the content that does load:
+        document.getElementsByClassName("dials")[0].setAttribute("class", "hidden");
+    }
+}
+MonthModal.prototype = new MchdErrorModal(); 
+
+function QuickviewFactory(quickviewUrl){
+	this.url = quickviewUrl
+    this.create = function(){
+        switch (this.url.network) {
+            case 'UCRN':
+            this.mchd = new Ucrn();
+            break;
+        case 'AGWX':
+            this.mchd = new AGWX();
+            break;
+        case 'UAGRIMET':
+            this.mchd = new UAgrimet();
+            break;
+        case 'USUwx':
+            this.mchd = new UsuWx();
+            break;
+        case 'USCAN':
+            this.mchd = new UScan();
+            break;
+        case 'FGNET' :
+            this.mchd = new FGNet();
+            break;
+        default:
+            this.mchd = null;
+            console.log("FATAL: Unknown Network {" + quickviewUrl.network + "}");
+            break;
+        }
+        return this.mchd;
+    }
+
+    this.createStation = function(type){
+        switch(type){
+            case 'soil':
+            case 'turf_soil':
+            case 'lbw_soil':
+            case 'soil_profile':
+                this.station = new AbnormalSoil(this.url.stationId);
+                break;
+            case 'sub_station_soil':
+                this.station = new MultSoilSubStations(this.url.stationId);
+                break;
+            case 'pressure':
+                this.station = new Pressure(this.url.stationId);
+                break;
+            case 'regular':
+                this.station = new Station(this.url.stationId);
+                break;
+            default:
+                this.station = new Station(this.url.stationId);
+        } 
+        return this.station;
+    }
+}function Station(stationId){
+    this.stationId = stationId;
+    this.isOdd = false;
+    this.oddDataType = '';
+    this.gridTitle ='';
+
+    this.generateGridName = function(name){
+        // do nothing
+    }
+    this.attachAbnormalVars = function(abnormalVars,config){
+        // do nothing 
+    }
+
+    this.generateGrid = function(){
+        // do nothing
+    }
+    this.createGrid = function(){
+        // do nothing
+    }
+    this.sortOddStationHeaders = function(config){
+        // do nothing
+    }
+
+    this.runAfter = function() {
+        // do nothing 
+    }
+}
+AbnormalVars.prototype = new Station();
+
+function AbnormalVars(stationId){
+    Station.call(this,stationId);
+    this.isOdd = true;
+
+    this.generateGrid = function(data){
+        json = JSON.parse(data);
+        this.generateGridName(Object.keys(json)[0]);
+        this.createGrid();
+        this.attachAbnormalVars(data,mchd.oddVarsConfig);
+        mchd.getOddVarsTable(station.gridTitle,false);
+    }
+
+    this.generateGridName = function(name){
+        var subStationName = '';
+        if(this.stationId == '1266812' || stationId == '1266813'){
+            var re = new RegExp('[^_]*$');
+            var subName = re.exec(name);
+            subStationName = ' '+subName[0];
+        }
+        this.gridTitle = this.oddDataType + subStationName;
+    }
+
+    this.createGrid = function(){
+        ctn = $('.container-fluid').append('<div class="grid-ctn"></div>');
+        ctn = ctn[0].lastChild;
+        $('<h1>'+ this.gridTitle +'<h1>').appendTo(ctn); 
+        this.gridTitle = this.gridTitle.replace(/\s+/g, ''); 
+        $('<div id='+"thunder-grid-ctn-"+this.gridTitle+'></div>').appendTo(ctn); 
+    }
+
+    this.attachAbnormalVars = function(abnormalVars,config){
+        varNames = new OddVarNames();
+        Abnormaljson = JSON.parse(abnormalVars);
+        for (var key in Abnormaljson) {
+            if (Abnormaljson.hasOwnProperty(key)) {
+                config.push({dataName:key,name:varNames.findVarName(key),order:mchd.hourlyConfig.length});
+            }
+        }
+        this.sortOddStationHeaders(config);
+    }
+}
+
+AbnormalSoil.prototype = new AbnormalVars();
+function AbnormalSoil(stationId){
+    AbnormalVars.call(this,stationId);
+    this.oddDataType = 'Soil';
+    this.sortOddStationHeaders = function(config){
+        config.sort(function(a,b){
+            var reA = /[^a-zA-Z]/g;
+            var reN = /[^0-9]/g;
+
+            var aA = a.name.replace(reA, "");
+            var bA = b.name.replace(reA, "");
+            if (aA === bA) {
+                var aN = parseInt(a.name.replace(reN, ""), 10);
+                var bN = parseInt(b.name.replace(reN, ""), 10);
+                if(aN === bN){
+                    return 0;
+                }else if(aN > bN){
+                    return 1;
+                }else{
+                    return -1;
+                }
+            } else {
+                if(aA > bA){
+                    return 1;
+                }else{
+                    return -1;
+                }
+            }
+        });
+    }
+}
+MultSoilSubStations.prototype = new AbnormalSoil();
+function MultSoilSubStations(stationId){
+    AbnormalSoil.call(this,stationId);
+    this.generateGridName = function(name){
+        var re = new RegExp('[^_]*$');
+        var subName = re.exec(name);
+        this.gridTitle = this.oddDataType + ' ' + subName[0];
+    }
+    this.attachAbnormalVars = function(vars,config){
+        varNames = new OddVarNames();
+        for (var key in vars) {
+            if (vars.hasOwnProperty(key)) {
+                config.push({dataName:key,name:varNames.findVarName(key),order:mchd.hourlyConfig.length});
+            }
+        }
+        this.sortOddStationHeaders(config);
+    }
+
+    this.generateGrid = function(data){
+        subStations = this.parseSubStationHeader(data);
+        json = JSON.parse(data);
+        for (var i = subStations.length - 1; i >= 0; i--) {
+            this.generateGridName(subStations[i][0][0]);
+            this.createGrid();
+            this.attachAbnormalVars(subStations[i].reduce(function(prev,curr){prev[curr[0]]=curr[1];return prev;},{}),mchd.oddVarsConfig);
+            this.gridTitle = this.gridTitle.replace(/\s+/g, ''); 
+            mchd.getOddVarsTable(station.gridTitle,true);
+            // reset config
+            mchd.oddVarsConfig = [{dataName:"date_time", name: "timestamp", order: 1}];
+        }
+    }
+
+    this.createGrid = function(){
+        ctn = $('.container-fluid').append('<div class="grid-ctn"><div>');
+        ctn = ctn[0].lastChild;
+        $('<h1>'+ this.gridTitle +'<h1>').appendTo(ctn); 
+        this.gridTitle = this.gridTitle.replace(/\s+/g, ''); 
+        $('<div id='+"thunder-grid-ctn-"+this.gridTitle+'></div>').appendTo(ctn); 
+    }
+
+    this.parseSubStationHeader = function(data){
+        json = JSON.parse(data);
+        data = Object.entries(json);
+        var re = new RegExp('[^_]*$');
+        var subs = new Array();
+        var allSubs = new Array();
+        for (var i = data.length - 1; i >= 0; i--) {
+            var subName = re.exec(data[i][0]);
+            if(subs.indexOf(subName[0]) == -1){
+                subs.push(subName[0]);
+            }
+        }
+        for (var i = subs.length - 1; i >= 0; i--) {
+            arr = new Array();
+            for (var j = data.length - 1; j >= 0; j--) {
+                var subName = re.exec(data[j][0]);
+                if(subs[i] == subName[0]){
+                    arr.push(data[j]);
+                }
+            } 
+            allSubs.push(arr);
+        }
+        return allSubs;
+    }
+
+    this.sortOddStationHeaders = function(config){
+        config.sort(function(a,b){
+            var re = new RegExp('[0-9]+');
+            var x = re.exec(a.name);
+            var y = re.exec(b.name);
+            if(y == null || x == null){
+                return 0;
+            }
+            x=parseInt(x[0]);
+            y=parseInt(y[0]);
+            if (x < y) {
+                return -1;
+            }
+            if (x > y) {
+                return 1;
+            }
+            return 0;
+        });
+    }
+}
+
+TemporarilyDown.prototype = new Station();
+function TemporarilyDown(stationId) {
+    Station.call(this,stationId);
+    this.isOdd = true;
+
+    this.runAfter = function() {
+        var domHelper = new DomHelper();
+        var modal = new Modal();
+        var mod = modal.createModal();
+        modal.addTitle("Decommissioned");
+        var p = document.createElement("p");
+        domHelper.addClass(p, "temporary-down")
+        var text = document.createTextNode("This station has been temporarily decommissioned and is expected to be reactivated in the future.");
+        p.appendChild(text);
+        modal.addContent(p);
+        $("#home-container-global").append(mod);
+        console.log("gasp");
+    }
+
+    loadFrequencyDataFailed = function() {
+        // do nothing
+    }
+}
+Pressure.prototype = new AbnormalVars();
+    
+function Pressure(stationId){
+	AbnormalVars.call(this,stationId);
+    this.oddDataType = 'Barometric Pressure';
+}
+function Network(){
+    var currentConfig = {};
+    var dailyConfig = {};
+    var hourlyConfig = {};
+    var getOddVarsTable = {};
+    var data = {};
+    var stationName = "";
+    var state = "";
+    var ajaxFails = 0
+    var now = new Date();
+    var endDate = (new Date()).toISOString();
+    var startDate = (new Date(now - (30 * 24 * 60 * 60 * 1000))).toISOString();
+    this.maxRows = 7;
+    this.paging = true;
+    this.fixedFirstCol = true;
+
+    this.getStationNameState = function(){
+        document.getElementById("station-name").innerHTML = this.stationName+','+this.state;
+    }
+
+    this.getOverview = function(){
+    	$( document ).ready(function() {
+    		document.getElementById('station-overview').innerHTML 
+    		="<b>Network Overview:</b> <u><a href='../dashboard/overview/" 
+    		+  quickviewUrl.network + ".php'>" + quickviewUrl.network + "</a></u>"
+    		+", <u><a href=/mchd/dashboard/dashboard.php?network="+quickviewUrl.network
+    		+"&station="+quickviewUrl.stationId+"&startdate="+startDate+"&enddate="+endDate
+    		+"&units=E&showgraph=0&><b>View Station Data</b></a></u>";
+    	});
+    }
+
+    this.getCurrTable = function(){
+        var grid = new ThunderGrid();
+        grid.addConfig(this.currentConfig);
+        grid.setData(this.data);
+        grid.setMaxRows(this.maxRows);
+        grid.setDataNullConfig(this.data,'M');
+        if(this.paging){
+            grid.enablePaging();
+        }
+        if(this.fixedFirstCol){
+            grid.setFixedFirstCol();
+        }
+        if($("#thunder-grid-ctn-curr").children().length < 1){
+            grid.setParentId('thunder-grid-ctn-curr');
+            $("#thunder-grid-ctn-curr").append(grid.getTable());
+        }
+    }
+
+    this.getHlyTable = function(){
+        var grid = new ThunderGrid();
+        grid.addConfig(this.hourlyConfig);
+        grid.setData(this.data);
+        grid.setMaxRows(this.maxRows);
+        grid.setDataNullConfig(this.data,'M');
+        if(this.paging){
+            grid.enablePaging();
+        }
+        if(this.fixedFirstCol){
+            grid.setFixedFirstCol();
+        }
+        if($("#thunder-grid-ctn-hly").children().length < 1){
+            grid.setParentId('thunder-grid-ctn-hly');
+            $("#thunder-grid-ctn-hly").append(grid.getTable());
+        }
+    }
+
+    this.getDlyTable = function(){
+        var grid = new ThunderGrid();
+        grid.addConfig(this.dailyConfig);
+        grid.setData(this.data);
+        grid.setMaxRows(this.maxRows);
+        grid.setDataNullConfig(this.data,'M');
+        if(this.paging){
+            grid.enablePaging();
+        }
+        if(this.fixedFirstCol){
+            grid.setFixedFirstCol();
+        }
+        if($("#thunder-grid-ctn-dly").children().length < 1){
+            grid.setParentId('thunder-grid-ctn-dly');
+            $("#thunder-grid-ctn-dly").append(grid.getTable());
+        }
+    }
+    this.getOddVarsTable = function(title,hasMultSubs){
+        var grid = new ThunderGrid();
+        grid.addConfig(this.oddVarsConfig);
+        grid.setData(this.data);
+        grid.setMaxRows(this.maxRows);
+        grid.setDataNullConfig(this.data,'M');
+        if(this.paging){
+            grid.enablePaging();
+        }
+        if(this.fixedFirstCol){
+            grid.setFixedFirstCol();
+        }
+        if($("#thunder-grid-ctn-"+title).children().length < 1){
+                grid.setParentId('thunder-grid-ctn-' + title);
+                $("#thunder-grid-ctn-"+title).append(grid.getTable());
+        }
+    }
+}Ucrn.prototype = new Network();
+
+function Ucrn(){
+        //generate Current config
+    this.currentConfig = [{dataName:"date_time", name: "timestamp", order: 1},
+                    {dataName:"airtprt", name: "AirTPRT (°F)", order: 2},
+                    {dataName:"rh", name: "RH (%)", order: 3},
+                    {dataName:"td", name: "Td (°F)", order: 4},
+                    {dataName:"precip", name: "Precip5Min (in)", order: 5},
+                    {dataName:"wetness", name: "wetness (%)", order: 6},
+                    {dataName:"solar",name:"Solar (W/m^2)",order:7},
+                    {dataName:"winds", name: "WindS (mph)", order: 8},
+                    {dataName:"windd", name: "WindD (°)", order: 9},
+                    {dataName:"winds_max", name: "WindS_Max (mph)", order: 10}];
+        //generate Hourly config
+    this.hourlyConfig = [{dataName:"date_time", name: "timestamp", order: 1},
+                    {dataName:"airt", name: "AirT (°F)", order: 2},
+                    {dataName:"airt_max", name: "AirT_Max (°F)", order: 3},
+                    {dataName:"airt_min", name: "AirT_Min (°F)", order: 4},
+                    {dataName:"rh_max", name: "RH_Max (%)", order: 5},
+                    {dataName:"rh_min", name: "RH_Min (%)", order: 6},
+                    {dataName:"td", name: "Td (°F)", order: 7},
+                    {dataName:"precip", name: "Precip (in)", order: 8},
+                    {dataName:"solar", name: "Solar (MJ/m^2)", order: 9},
+                    {dataName:"winds", name: "WindS (mph)", order: 10},
+                    {dataName:"windd", name: "WindD (°)", order: 11},
+                    {dataName:"winds_max", name: "WindS_Max (mph)", order: 12},
+                    {dataName:"wetness", name: "wetness (%)", order: 13},
+                    {dataName:"eto", name: "ETo (in)", order: 14},
+                    {dataName:"etr", name: "ETr (in)", order: 15},
+                    {dataName:"sealevel_pressure", name: "sea_level_ pressure (kPa)", order: 16},
+                    {dataName:"site_pressure", name: "site_pressure (kPa)", order: 17}];
+
+        //generate Daily config
+    this.dailyConfig = [{dataName:"date_time", name: "timestamp", order: 1},
+                    {dataName:"airt", name: "AirT (°F)", order: 2},
+                    {dataName:"airt_max", name: "AirT_Max (°F)", order: 3},
+                    {dataName:"airt_min", name: "AirT_Min (°F)", order: 4},
+                    {dataName:"rh_max", name: "RH_Max (%)", order: 5},
+                    {dataName:"rh_min", name: "RH_Min (%)", order: 6},
+                    {dataName:"td", name: "Td (°F)", order: 7},
+                    {dataName:"td_max", name: "Td_Max (°F)", order: 8},
+                    {dataName:"td_min", name: "Td_Min (°F)", order: 9},
+                    {dataName:"solar", name: "Solar (MJ/m^2)", order: 10},
+                    {dataName:"winds", name: "WindS (mph)", order: 11},
+                    {dataName:"windd", name: "WindD (°)", order: 12},
+                    {dataName:"winds_max", name: "WindS_Max (mph)", order: 13},
+                    {dataName:"precip", name: "Precip (in)", order: 14},
+                    {dataName:"wetness", name: "Wetness (%)", order: 15},
+                    {dataName:"eto", name: "ETo (in)", order: 16},
+                    {dataName:"etr", name: "ETr (in)", order: 17}];
+}
+AGWX.prototype = new Network();
+
+function AGWX(){
+    //generate Current config
+    this.currentConfig = [{dataName:"date_time", name: "timestamp", order: 1},
+                    {dataName:"airt", name: "AirT (°F)", order: 2},
+                    {dataName:"airt_avg", name: "AirT_Avg (°F)", order: 3},
+                    {dataName:"rh_avg", name: "RH_Avg (%)", order: 4},
+                    {dataName:"td_avg", name: "Td_Avg (°F)", order: 5},
+                    {dataName:"winds_avg", name: "WindS_Avg (mph)", order: 6},
+                    {dataName:"windd_avg",name:"WindD_Avg (°)",order:7},
+                    {dataName:"solarw_avg", name: "SolarW_Avg (watts/m^2)", order: 8},
+                    {dataName:"soilt4", name: "SoilT4 (°F)", order: 9},
+                    {dataName:"soilt8", name: "SoilT8 (°F)", order: 10},
+                    {dataName:"soilvwc8", name: "SoilVWC8 (%)", order: 11}];
+    //generate Hourly config
+    this.hourlyConfig = [{dataName:"date_time", name: "timestamp", order: 1},
+                    {dataName:"airt_avg", name: "AirT_Avg (°F)", order: 2},
+                    {dataName:"airt_max", name: "AirT_Max (°F)", order: 3},
+                    {dataName:"airt_min", name: "AirT_Min (°F)", order: 4},
+                    {dataName:"rh_max", name: "RH_Max (%)", order: 5},
+                    {dataName:"rh_min", name: "RH_Min (%)", order: 6},
+                    {dataName:"td_avg", name: "Td_Avg (°F)", order: 7},
+                    {dataName:"precip_tb", name: "Precip (in)", order: 8},
+                    {dataName:"solarw_avg", name: "SolarW_Avg (watts/m^2)", order: 9},
+                    {dataName:"winds_avg", name: "WindS_Avg (mph)", order: 10},
+                    {dataName:"windd_avg", name: "WindD_Avg (°)", order: 11},
+                    {dataName:"winds_max", name: "WindS_Max (mph)", order: 12},
+                    {dataName:"soilt4_avg", name: "SoilT4_Avg (°F)", order: 13},
+                    {dataName:"soilt8_avg", name: "SoilT8_Avg (°F)", order: 14},
+                    {dataName:"soilvwc8_avg", name: "SoilVWC8_Avg (%)", order: 15},
+                    {dataName:"eto", name: "ETo (in)", order: 16},
+                    {dataName:"etr", name: "ETr (in)", order: 17},
+                    {dataName:"sealevel_pressure", name: "sea_level_ pressure (kPa)", order: 18},
+                    {dataName:"site_pressure", name: "site_pressure (kPa)", order: 19}];
+
+    //generate Daily config
+    this.dailyConfig = [{dataName:"date_time", name: "timestamp", order: 1},
+                    {dataName:"airt_avg", name: "AirT_Avg (°F)", order: 2},
+                    {dataName:"airt_max", name: "AirT_Max (°F)", order: 3},
+                    {dataName:"airt_min", name: "AirT_Min (°F)", order: 4},
+                    {dataName:"rh_max", name: "RH_Max (%)", order: 5},
+                    {dataName:"rh_min", name: "RH_Min (%)", order: 6},
+                    {dataName:"td_avg", name: "Td_Avg (°F)", order: 7},
+                    {dataName:"td_max", name: "Td_Max (°F)", order: 8},
+                    {dataName:"td_min", name: "Td_Min (°F)", order: 9},
+                    {dataName:"solarmj", name: "SolarMJ (MJ/m^2)", order: 10},
+                    {dataName:"winds_avg", name: "WindS_Avg (mph)", order: 11},
+                    {dataName:"windd_avg", name: "WindD_Avg (°)", order: 12},
+                    {dataName:"winds_max", name: "WindS_Max (mph)", order: 13},
+                    {dataName:"precip_tb", name: "Precip (in)", order: 14},
+                    {dataName:"soilt4_avg", name: "SoilT4_Avg (°F)", order: 15},
+                    {dataName:"soilt8_avg", name: "SoilT8_Avg (°F)", order: 16},
+                    {dataName:"soilvwc8_avg", name: "SoilVWC8_Avg (%)", order: 17},
+                    {dataName:"eto", name: "ETo (in)", order: 18},
+                    {dataName:"etr", name: "ETr (in)", order: 19}];
+
+    this.oddVarsConfig = [{dataName:"date_time", name: "timestamp", order: 1}];
+
+}
+UAgrimet.prototype = new Network();
+
+function UAgrimet(){
+        //generate Current config
+    this.currentConfig = [{dataName:"date_time", name: "timestamp", order: 1},
+                    {dataName:"airt", name: "AirT (°F)", order: 2},
+                    {dataName:"airt_avg", name: "AirT_Avg (°F)", order: 3},
+                    {dataName:"rh_avg", name: "RH_Avg (%)", order: 4},
+                    {dataName:"td", name: "Td (°F)", order: 5},
+                    {dataName:"winds", name: "WindS (mph)", order: 6},
+                    {dataName:"winds_avg", name: "WindS_Avg (mph)", order: 7},
+                    {dataName:"windd_avg",name:"WindD_Avg (°)",order:8},
+                    {dataName:"winds_max", name: "WindS_Max (mph)", order: 9},
+                    {dataName:"solar", name: "Solar (watts/m^2)", order: 10}];
+
+        //generate Hourly config
+    this.hourlyConfig = [{dataName:"date_time", name: "timestamp", order: 1},
+                    {dataName:"airt_avg", name: "AirT_Avg (°F)", order: 2},
+                    {dataName:"airt_max", name: "AirT_Max (°F)", order: 3},
+                    {dataName:"airt_min", name: "AirT_Min (°F)", order: 4},
+                    {dataName:"rh_max", name: "RH_Max (%)", order: 5},
+                    {dataName:"rh_min", name: "RH_Min (%)", order: 6},
+                    {dataName:"td_avg", name: "Td_Avg (°F)", order: 7},
+                    {dataName:"solar", name: "Solar (watts/m^2)", order: 8},
+                    {dataName:"winds_avg", name: "WindS_Avg (mph)", order: 9},
+                    {dataName:"windd_avg", name: "WindD_Avg (°)", order: 10},
+                    {dataName:"winds_max", name: "WindS_Max (mph)", order: 11},
+                    {dataName:"eto", name: "ETo (in)", order: 12},
+                    {dataName:"etr", name: "ETr (in)", order: 13},
+                    {dataName:"sealevel_pressure", name: "sea_level_ pressure (kPa)", order: 14},
+                    {dataName:"site_pressure", name: "site_pressure (kPa)", order: 15}];
+
+
+        //generate Daily config
+    this.dailyConfig = [{dataName:"date_time", name: "timestamp", order: 1},
+                    {dataName:"airt_avg", name: "AirT_Avg (°F)", order: 2},
+                    {dataName:"airt_max", name: "AirT_Max (°F)", order: 3},
+                    {dataName:"airt_min", name: "AirT_Min (°F)", order: 4},
+                    {dataName:"rh_max", name: "RH_Max (%)", order: 5},
+                    {dataName:"rh_min", name: "RH_Min (%)", order: 6},
+                    {dataName:"td_avg", name: "Td_Avg (°F)", order: 7},
+                    {dataName:"td_max", name: "Td_Max (°F)", order: 8},
+                    {dataName:"td_min", name: "Td_Min (°F)", order: 9},
+                    {dataName:"ea_avg", name: "EA_Avg (kPa)", order: 10},
+                    {dataName:"solarmj", name: "SolarMJ (MJ/m^2)", order: 11},
+                    {dataName:"winds_avg", name: "WindS_Avg (mph)", order: 12},
+                    {dataName:"windd_avg", name: "WindD_Avg (°)", order: 13},
+                    {dataName:"winds_max", name: "WindS_Max (mph)", order: 14},
+                    {dataName:"precip", name: "Precip (in)", order: 15},
+                    {dataName:"eto", name: "ETo (in)", order: 16},
+                    {dataName:"etr", name: "ETr (in)", order: 17}];
+
+    this.oddVarsConfig = [{dataName:"date_time", name: "timestamp", order: 1}];  
+}
+UsuWx.prototype = new Network();
+
+function UsuWx(){
+    // remove current from showing
+    $( document ).ready(function() {
+        var el = document.getElementById('curr-ctn');
+        el.style.display = "none";
+        moveHourly();
+    });
+    
+            //generate Hourly config
+    this.hourlyConfig = [{dataName:"date_time", name: "timestamp", order: 1},
+                    {dataName:"airt_avg", name: "AirT_Avg (°F)", order: 2},
+                    {dataName:"airt_max", name: "AirT_Max (°F)", order: 3},
+                    {dataName:"airt_min", name: "AirT_Min (°F)", order: 4},
+                    {dataName:"rh", name: "RH (%)", order: 5},
+                    {dataName:"rh_max", name: "RH_Max (%)", order: 6},
+                    {dataName:"rh_min", name: "RH_Min (%)", order: 7},
+                    {dataName:"td_avg", name: "Td_Avg (°F)", order: 8},
+                    {dataName:"solarmj", name: "Solarmj (MJ/m^2)", order: 9},
+                    {dataName:"netrad_avg", name: "NetRad_Avg (w/m^2)", order: 10},
+                    {dataName:"ppf_avg", name: "PPF_Avg (unmol m-2)", order: 11},
+                    {dataName:"winds_avg", name: "WindS_Avg (mph)", order: 12},
+                    {dataName:"windd_avg", name: "WindD_Avg (°)", order: 13},
+                    {dataName:"winds_max", name: "WindS_Max (mph)", order: 14},
+                    {dataName:"wet_pct", name: "wet_pct (%)", order: 15},
+                    {dataName:"precip", name: "Precip (in)", order: 16},
+                    {dataName:"pressure", name: "pressure (kPa)", order: 17},
+                    {dataName:"co2_avg", name: "CO2_Avg (ppm)", order: 18},
+                    {dataName:"surfacet1_avg", name: "SurfaceT1_Avg (°F)", order: 19},
+                    {dataName:"visibilitymiles", name: "visibility (miles)", order: 20},
+                    {dataName:"eto", name: "ETo (in)", order: 21},
+                    {dataName:"etr", name: "ETr (in)", order: 22}];
+
+
+            //generate Daily config
+    this.dailyConfig = [{dataName:"date_time", name: "timestamp", order: 1},
+                    {dataName:"airt_avg", name: "AirT_Avg (°F)", order: 2},
+                    {dataName:"airt_max", name: "AirT_Max (°F)", order: 3},
+                    {dataName:"airt_min", name: "AirT_Min (°F)", order: 4},
+                    {dataName:"rh_max", name: "RH_Max (%)", order: 5},
+                    {dataName:"rh_min", name: "RH_Min (%)", order: 6},
+                    {dataName:"td_avg", name: "Td_Avg (°F)", order: 7},
+                    {dataName:"td_max", name: "Td_Max (°F)", order: 8},
+                    {dataName:"td_min", name: "Td_Min (°F)", order: 9},
+                    {dataName:"solarmj", name: "Solarmj (MJ/m^2)", order: 10},
+                    {dataName:"netrad_avg", name: "NetRad_Avg (w/m^2)", order: 11},
+                    {dataName:"ppf_avg", name: "PPF_Avg (unmol m-2)", order: 12},
+                    {dataName:"winds_avg", name: "WindS_Avg (mph)", order: 13},
+                    {dataName:"windd_avg", name: "WindD_Avg (°)", order: 14},
+                    {dataName:"winds_max", name: "WindS_Max (mph)", order: 15},
+                    {dataName:"wet_pct", name: "wet_pct (%)", order: 16},
+                    {dataName:"precip", name: "Precip (in)", order: 17},
+                    {dataName:"pressure", name: "pressure (kPa)", order: 18},
+                    {dataName:"co2_avg", name: "CO2_Avg (ppm)", order: 19},
+                    {dataName:"surfacet1_avg", name: "SurfaceT1_Avg (°F)", order: 20},
+                    {dataName:"visibilitymiles_avg", name: "visibility (miles)", order: 21},
+                    {dataName:"eto", name: "ETo (in)", order: 22},
+                    {dataName:"etr", name: "ETr (in)", order: 23}];
+
+}
+
+UScan.prototype = new Network();
+
+function UScan(){
+    // remove current from showing
+    $( document ).ready(function() {
+        var el = document.getElementById('curr-ctn');
+        el.style.display = "none";
+
+        // nrcs credit
+        var stationInfo = document.getElementById("station-info-ctn");
+        var nrcs = document.createElement("p");
+        nrcs.className = "nrcs";
+        nrcs.textContent = "Data courtesy of NRCS SCAN";
+        stationInfo.appendChild(nrcs);
+        moveHourly();
+    });
+
+            //generate Hourly config
+    this.hourlyConfig = [{dataName:"date_time", name: "timestamp", order: 1},
+                    {dataName:"airt_avg", name: "AirT_Avg (°F)", order: 2},
+                    {dataName:"airt_max", name: "AirT_Max (°F)", order: 3},
+                    {dataName:"airt_min", name: "AirT_Min (°F)", order: 4},
+                    {dataName:"rh", name: "RH (%)", order: 5},
+                    {dataName:"rh_max", name: "RH_Max (%)", order: 6},
+                    {dataName:"rh_min", name: "RH_Min (%)", order: 7},
+                    {dataName:"td_avg", name: "Td_Avg (°F)", order: 8},
+                    {dataName:"solarw_avg", name: "SolarW_Avg (watts)", order: 9},
+                    {dataName:"winds_avg", name: "WindS_Avg (mph)", order: 12},
+                    {dataName:"windd_avg", name: "WindD_Avg (°)", order: 13},
+                    {dataName:"winds_max", name: "WindS_Max (mph)", order: 14},
+                    {dataName:"precip", name: "Precip (in)", order: 16},
+                    {dataName:"eto", name: "ETo (in)", order: 21},
+                    {dataName:"etr", name: "ETr (in)", order: 22},
+                    {dataName:"sealevel_pressure", name: "sea_level_ pressure (kPa)", order: 23},
+                    {dataName:"site_pressure", name: "site_pressure (kPa)", order: 24}];
+
+
+            //generate Daily config
+    this.dailyConfig = [{dataName:"date_time", name: "timestamp", order: 1},
+                    {dataName:"airt_avg", name: "AirT_Avg (°F)", order: 2},
+                    {dataName:"airt_max", name: "AirT_Max (°F)", order: 3},
+                    {dataName:"airt_min", name: "AirT_Min (°F)", order: 4},
+                    {dataName:"rh_max", name: "RH_Max (%)", order: 5},
+                    {dataName:"rh_min", name: "RH_Min (%)", order: 6},
+                    {dataName:"td_avg", name: "Td_Avg (°F)", order: 7},
+                    {dataName:"solarmj", name: "Solarmj (MJ)", order: 10},
+                    {dataName:"winds_avg", name: "WindS_Avg (mph)", order: 13},
+                    {dataName:"windd_avg", name: "WindD_Avg (°)", order: 14},
+                    {dataName:"winds_max", name: "WindS_Max (mph)", order: 15},
+                    {dataName:"precip", name: "Precip (in)", order: 17},
+                    {dataName:"eto", name: "ETo (in)", order: 22},
+                    {dataName:"etr", name: "ETr (in)", order: 23}];
+
+}FGNet.prototype = new Network();
+
+function FGNet(){
+    //generate Current config
+    this.currentConfig = [{dataName:"date_time", name: "timestamp", order: 1},
+                        {dataName:"airt_avg", name:"AirT (°F)", order: 2},
+                        {dataName:"td_avg", name: "DPT_F (°F)", order: 3},
+                        {dataName:"rh_avg", name: "RH (%)", order: 4},
+                        {dataName:"soilt10_i", name: "SoilT10 (°F)", order: 5},
+                        {dataName:"soilm10_i", name: "SoilM10 (%)", order: 5},
+                        {dataName:"solarw_avg", name: "Solar_Rad (w/m^2)", order: 5},
+                        {dataName:"winds_avg", name: "Winds (mph)", order: 6},
+                        {dataName:"windd_avg", name: "WindD_Deg (°)", order: 7},
+                        {dataName:"winds_max", name: "Winds_Max (mph)", order: 8},
+                        {dataName:"lwspct_wet", name: "Leaf Wetness (%)", order: 9},
+                        {dataName:"rain", name: "Tot_10rain (in)", order: 10},
+
+                        ];
+    //generate Hourly config
+    this.hourlyConfig = [{dataName:"date_time", name: "timestamp", order: 1},
+                        {dataName:"airt_avg", name:"AirT_Avg (°F)", order: 2},
+                        {dataName:"airt_max", name: "AirT_Max (°F)", order: 3},
+                        {dataName:"airt_min", name: "AirT_Min (°F)", order: 4},
+                        {dataName:"solarmj", name: "Solar Total (MJ)", order: 6},
+                        {dataName:"winds_avg", name: "Winds_Avg (mph)", order: 7},
+                        {dataName:"windd_avg", name: "Windd_Avg (°)", order: 8},
+                        {dataName:"winds_max", name: "Winds_Max (mph)", order: 9},
+                        {dataName:"rh_max", name: "RH_Max (%)", order: 11},
+                        {dataName:"rh_min", name: "RH_Min (%)", order: 12},
+                        {dataName:"budt_min", name: "Budt_Min (°F)", order: 13},
+                        {dataName:"lwspct_wet", name: "LWSpct_wet (%)", order: 14},
+                        {dataName:"leaft_min", name: "Leaft_Min (°F)", order: 14},
+                        {dataName:"td_avg", name: "DewPoint_Avg (°F)", order: 15},
+                        {dataName:"sealevel_pressure", name: "sea_level_ pressure (kPa)", order: 16},
+                        {dataName:"site_pressure", name: "site_pressure (kPa)", order: 17}];
+
+    //generate Daily config
+    this.dailyConfig = [{dataName:"date_time", name: "timestamp", order: 1},
+                        {dataName:"airt_avg", name:"AirT_Avg (°F)", order: 2},
+                        {dataName:"airt_max", name: "AirT_Max (°F)", order: 3},
+                        {dataName:"airt_min", name: "AirT_Min (°F)", order: 4},
+                        {dataName:"soilt10_i", name: "Soilt10 (°F)", order: 4},
+                        {dataName:"etr", name: "Etr (in)", order: 5},
+                        {dataName:"eto", name: "Eto (in)", order: 5},
+                        {dataName:"solarmj", name: "Solar_Tot (MJ)", order: 5},
+                        {dataName:"windd_avg", name: "WindD_Avg (°)", order: 6},
+                        {dataName:"winds_avg", name: "WindS_Avg (mph)", order: 7},
+                        {dataName:"winds_max", name: "WindS_Max (mph)", order: 8},
+                        {dataName:"rh_max", name: "rh_max (%)", order: 9},
+                        {dataName:"rh_min", name: "rh_min (%)", order: 10}];
+}
+
+        </script>
+
+        <script nonce="BJpK5hRbe4M9/gbI3Gestw==" type="text/javascript" src="quickview.js?v=3.0.4"></script>
+
+	</head>
+	<body>
+    <!-- side-bar -->
+<div class="side-bar bar-block" id="side-bar" aria-hidden="true">
+    <a id="side-bar-button" class="hamburger-button side-bar-closer">&#8801;</a>
+    <div class="hamburger-menu">
+        <div class="logo">
+            <img src="/resources/img/icons/smallLogoWhite.png" alt="USU Climate Center">
+        </div>
+      <div class="menu-buttons">
+    <div class="left-buttons">
+        <div class="left-dropdowns">
+            <div class="drop-down" alt="Forecast Dropdown">
+                <button class="drop-btn">Forecast</button>
+                <div class="drop-down-content">
+                    <div class="sub-drop-down" alt="Utah Drought Dropdown">
+                        <a class="sub-drop-title">Utah Drought</a>
+                        <div class="sub-content hidden">
+                            <a class="sub-drop-link" href="/service/">About Utah Drought</a>
+                            <a class="sub-drop-link" href="/service/droughtPredictionPages/snowpack.php">Snowpack</a>
+                            <a class="sub-drop-link" href="/service/droughtPredictionPages/utahEtMapping.php">Evapotranspiration</a>
+                            <a class="sub-drop-link" href="/service/droughtPredictionPages/utahRiverMap.php">Streamflow</a>
+                            <a class="sub-drop-link" href="/service/droughtPredictionPages/coloradoRiverWaterSupply.php">Colorado Water Supply</a>
+                            <a class="sub-drop-link" href="/service/droughtPredictionPages/soilMoistureMapping.php">Soil Moisture</a>
+                        </div>
+                    </div>
+                    <a href="/inversion.php">Inversion Forecast</a>
+                    <a href="/noaa">NOAA Forecast</a>
+                    <a href="/cloudSeeding/">Cloud Seeding</a>
+                    <a href="/verticalSounding/">Vertical Soundings</a>
+                    <a href="/fireMap/">Fire Weather</a>   
+                    <a href="/wrf/">Forecast Models</a>
+                    <a href="/swe/sweForecast.php">Snowpack Forecast</a>
+                    <a href="/westernDrought/">Western Drought</a>
+                    <div class="sub-drop-down" alt="Other Dropdown">
+                        <a class="sub-drop-title">Other</a>
+                        <div class="sub-content hidden">
+                            <a class="sub-drop-link" href="/GSL.php">GSL</a> 
+                            <a class="sub-drop-link" href="/snowForecast.php">Utah Climate Prediction</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="drop-down" alt="Climate Data Dropdown">
+                <button class="drop-btn">Climate Data</button>
+                <div class="drop-down-content">
+                    <a href="/swco/">Surface Weather & Climate Observations</a>
+                    <a href="/mchd/">Utah Climate Center Mesonet</a>
+                    <a href="/traps/">Utah TRAPs</a>
+                    <a href="/fruits/">Fruit Growth Models</a>
+                    <a href="/PeterSinks/">Peter Sinks</a>
+                    <a href="/reports/newFreezeDates.php">Freeze Dates</a>
+                    <a href="/reports/waterYear.php">Water Years</a>
+                    <a href="/climava/">ClimAVA</a>
+                </div>
+            </div>
+            <div class="drop-down" alt="UCC Mesonet">
+                <button class="drop-btn">UCC Mesonet</button>
+                <div class="drop-down-content">
+                    <a href="/mchd/">All Network Map</a>
+                    <div class="sub-drop-down" alt="Utah Drought Dropdown">
+                        <a class="sub-drop-title">Station Information</a>
+                        <div class="sub-content hidden">
+                            <a class="sub-drop-link" href="/mchd/dashboard/overview/AGWX.php">AGWX</a>
+                            <a class="sub-drop-link" href="/mchd/dashboard/overview/FGNET.php">FGNET</a>
+                            <a class="sub-drop-link" href="/mchd/dashboard/overview/UCRN.php">UCRN</a>
+                            <a class="sub-drop-link" href="/mchd/dashboard/overview/USCAN.php">USCAN</a>
+                            <a class="sub-drop-link" href="/mchd/dashboard/overview/UAGRIMET.php">UAGRIMET</a>
+                            <a class="sub-drop-link" href="/mchd/dashboard/overview/USUwx.php">USUwx</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="drop-down" alt="Maps Dropdown">
+                <button class="drop-btn">Maps</button>
+                <div class="drop-down-content">
+                    <a href="/swco/">Surface Weather & Climate Observations</a>
+                    <a href="/mchd/">Utah Climate Center Mesonet</a>
+                    <a href="/resources/img/maps/ucc-station-map.pdf">Utah Climate Center Mesonet PDF</a>
+                </div>
+            </div>
+            <div class="drop-down" alt="Resources Dropdown">
+                <button class="drop-btn">Resources</button>
+                <div class="drop-down-content">
+                    <a target="_black" href="https://www.cocorahs.org/state.aspx?state=ut">Water Rangers</a>
+                    <a href="/WaDR/">WaDR</a>
+                    <a href="/publications/">Research</a>
+                    <a href="/mapleTreeProject/mapleTreeProject.php">Maple Tree Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="user-interface">
+                <div class="login-button anchor-option">
+                <a class="drop-btn login-menu-button" href="/Admin/">Login</a>
+            </div>
+         
+</div>
+<div class="usu-logo">
+    <a href="https://usu.edu"><img src="/resources/img/icons/utahState.png" alt="Utah State University"></a>
+</div>
+    </div>
+</div>
+<!-- End of side-bar -->
+
+<nav class="nav-bar" id="nav-bar">
+    <div class="logo">
+        <a href="/"><img src="/resources/img/icons/logo.png" alt="USU Climate Center"></a>
+    </div>
+    <div class="menu-buttons">
+    <div class="left-buttons">
+        <div class="left-dropdowns">
+            <div class="drop-down" alt="Forecast Dropdown">
+                <button class="drop-btn">Forecast</button>
+                <div class="drop-down-content">
+                    <div class="sub-drop-down" alt="Utah Drought Dropdown">
+                        <a class="sub-drop-title">Utah Drought</a>
+                        <div class="sub-content hidden">
+                            <a class="sub-drop-link" href="/service/">About Utah Drought</a>
+                            <a class="sub-drop-link" href="/service/droughtPredictionPages/snowpack.php">Snowpack</a>
+                            <a class="sub-drop-link" href="/service/droughtPredictionPages/utahEtMapping.php">Evapotranspiration</a>
+                            <a class="sub-drop-link" href="/service/droughtPredictionPages/utahRiverMap.php">Streamflow</a>
+                            <a class="sub-drop-link" href="/service/droughtPredictionPages/coloradoRiverWaterSupply.php">Colorado Water Supply</a>
+                            <a class="sub-drop-link" href="/service/droughtPredictionPages/soilMoistureMapping.php">Soil Moisture</a>
+                        </div>
+                    </div>
+                    <a href="/inversion.php">Inversion Forecast</a>
+                    <a href="/noaa">NOAA Forecast</a>
+                    <a href="/cloudSeeding/">Cloud Seeding</a>
+                    <a href="/verticalSounding/">Vertical Soundings</a>
+                    <a href="/fireMap/">Fire Weather</a>   
+                    <a href="/wrf/">Forecast Models</a>
+                    <a href="/swe/sweForecast.php">Snowpack Forecast</a>
+                    <a href="/westernDrought/">Western Drought</a>
+                    <div class="sub-drop-down" alt="Other Dropdown">
+                        <a class="sub-drop-title">Other</a>
+                        <div class="sub-content hidden">
+                            <a class="sub-drop-link" href="/GSL.php">GSL</a> 
+                            <a class="sub-drop-link" href="/snowForecast.php">Utah Climate Prediction</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="drop-down" alt="Climate Data Dropdown">
+                <button class="drop-btn">Climate Data</button>
+                <div class="drop-down-content">
+                    <a href="/swco/">Surface Weather & Climate Observations</a>
+                    <a href="/mchd/">Utah Climate Center Mesonet</a>
+                    <a href="/traps/">Utah TRAPs</a>
+                    <a href="/fruits/">Fruit Growth Models</a>
+                    <a href="/PeterSinks/">Peter Sinks</a>
+                    <a href="/reports/newFreezeDates.php">Freeze Dates</a>
+                    <a href="/reports/waterYear.php">Water Years</a>
+                    <a href="/climava/">ClimAVA</a>
+                </div>
+            </div>
+            <div class="drop-down" alt="UCC Mesonet">
+                <button class="drop-btn">UCC Mesonet</button>
+                <div class="drop-down-content">
+                    <a href="/mchd/">All Network Map</a>
+                    <div class="sub-drop-down" alt="Utah Drought Dropdown">
+                        <a class="sub-drop-title">Station Information</a>
+                        <div class="sub-content hidden">
+                            <a class="sub-drop-link" href="/mchd/dashboard/overview/AGWX.php">AGWX</a>
+                            <a class="sub-drop-link" href="/mchd/dashboard/overview/FGNET.php">FGNET</a>
+                            <a class="sub-drop-link" href="/mchd/dashboard/overview/UCRN.php">UCRN</a>
+                            <a class="sub-drop-link" href="/mchd/dashboard/overview/USCAN.php">USCAN</a>
+                            <a class="sub-drop-link" href="/mchd/dashboard/overview/UAGRIMET.php">UAGRIMET</a>
+                            <a class="sub-drop-link" href="/mchd/dashboard/overview/USUwx.php">USUwx</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="drop-down" alt="Maps Dropdown">
+                <button class="drop-btn">Maps</button>
+                <div class="drop-down-content">
+                    <a href="/swco/">Surface Weather & Climate Observations</a>
+                    <a href="/mchd/">Utah Climate Center Mesonet</a>
+                    <a href="/resources/img/maps/ucc-station-map.pdf">Utah Climate Center Mesonet PDF</a>
+                </div>
+            </div>
+            <div class="drop-down" alt="Resources Dropdown">
+                <button class="drop-btn">Resources</button>
+                <div class="drop-down-content">
+                    <a target="_black" href="https://www.cocorahs.org/state.aspx?state=ut">Water Rangers</a>
+                    <a href="/WaDR/">WaDR</a>
+                    <a href="/publications/">Research</a>
+                    <a href="/mapleTreeProject/mapleTreeProject.php">Maple Tree Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="user-interface">
+                <div class="login-button anchor-option">
+                <a class="drop-btn login-menu-button" href="/Admin/">Login</a>
+            </div>
+         
+</div>
+<div class="usu-logo">
+    <a href="https://usu.edu"><img src="/resources/img/icons/utahState.png" alt="Utah State University"></a>
+</div>
+    <a id="side-bar-button-nav" class="hamburger-button side-bar-opener">&#8801;</a>
+</nav>
+<div class="main-content" id="main-content">
+		<div id="home-container-global">
+    		<div id="subheader-shadow-global">
+        		<div id="home-container-wrapper">
+               		<div id="pagecontent">
+                    	<div class="container-fluid">
+                        <div class="climate-header" id="station-name"></div>
+                        <div id="station-info-ctn">
+                            <p id="station-overview"></p>
+                        </div>
+                    		<div class ="grid-ctn" id="curr-ctn">
+                    			<h1 id = 'current-tab'>Current</h1>
+                    			<div id="thunder-grid-ctn-curr"></div>
+                    		</div>
+                    		<div class = "grid-ctn hourly" >
+                    			<h1>Hourly</h1>
+                    			<div id="thunder-grid-ctn-hly"></div>
+                    		</div>
+                    		<div class = "grid-ctn">
+                    			<h1>Daily</h1>
+                    			<div id="thunder-grid-ctn-dly"></div>
+                    		</div>
+                      </div>
+                    </div>
+                 	<!-- End page content -->
+            	</div>
+                <!-- End footer -->
+            <!-- End of home container wrapper -->
+    		</div>
+		</div>
+    <!-- End of background wrapper -->
+    </div> <!-- End "maincontent" -->
+<div class="footer">
+    <div class="foot-left">
+        <a class="foot-link" href="/links.php">Climate Links</a>
+        <a class="foot-link" href="/credits.php">Credits</a>
+        <a class="foot-link" href="/feedback.php">Feedback</a>
+        <a class="foot-link" href="/policy.php">Policy & Uses</a>
+        <a class="foot-link" href="/staff/index.php">People</a>
+        <a class="foot-link" href="/about.php">About Us</a>
+        <a class="foot-link" href="/help.php">Help</a>
+    </div>
+    <div class="social-media">
+        <a href="https://www.facebook.com/utclimatecenter/"><img src="/resources/img/icons/facebook.png" alt="Facebook"></a>
+        <a href="https://twitter.com/utclimatecenter"><img src="/resources/img/icons/twitter.png" alt="Twitter"></a>
+    </div>
+</div>
+	</body>
+</html>

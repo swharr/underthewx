@@ -17,6 +17,10 @@ export interface StationReading {
   feelsLikeF: number;
   elevationFt: number;
   stale: boolean;
+  // Soil & leaf data (USU FGNET ag stations only)
+  soilTempF?: number;
+  soilMoisturePct?: number;
+  leafWetPct?: number;
 }
 
 export interface HomeLocation {

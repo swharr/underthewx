@@ -1,4 +1,3 @@
-import { Thermometer } from "lucide-react";
 import type { StationReading } from "../../types/weather";
 import type { StationKey } from "../../constants/stations";
 import { STATIONS } from "../../constants/stations";
@@ -23,6 +22,8 @@ export function StationCard({ stationKey, reading }: StationCardProps) {
       </div>
     );
   }
+
+  const hasSoil = reading.soilTempF != null || reading.soilMoisturePct != null;
 
   return (
     <div className={`card-sm ${reading.stale ? "opacity-60" : ""}`}>
@@ -51,7 +52,30 @@ export function StationCard({ stationKey, reading }: StationCardProps) {
         <span>DP: {reading.dewPointF.toFixed(1)}°</span>
         <span>Wind: {reading.windSpeedMph.toFixed(1)} {windDirection(reading.windDirDeg)}</span>
         <span>Precip: {reading.precipTodayIn.toFixed(2)}"</span>
+        <span>Solar: {reading.solarWm2} W/m²</span>
+        {reading.windGustMph > 0 && <span>Gust: {reading.windGustMph.toFixed(1)} mph</span>}
       </div>
+
+      {/* Soil data — shown only for USU FGNET stations */}
+      {hasSoil && (
+        <div className="mt-2 pt-2 border-t border-gray-800 grid grid-cols-2 gap-1 text-xs">
+          {reading.soilTempF != null && (
+            <span className="text-amber-500/80">
+              Soil temp: {reading.soilTempF.toFixed(1)}°F
+            </span>
+          )}
+          {reading.soilMoisturePct != null && (
+            <span className="text-blue-400/80">
+              Soil moist: {reading.soilMoisturePct.toFixed(1)}%
+            </span>
+          )}
+          {reading.leafWetPct != null && reading.leafWetPct > 0 && (
+            <span className="text-green-400/80 col-span-2">
+              Leaf wet: {reading.leafWetPct.toFixed(0)}%
+            </span>
+          )}
+        </div>
+      )}
     </div>
   );
 }
