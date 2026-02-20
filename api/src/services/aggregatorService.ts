@@ -85,7 +85,9 @@ export function aggregate(inputs: {
   ): number {
     const contributors = normalized.filter((s) => {
       if (!s.normalized || s.weight === 0) return false;
-      if (skipZero && (s.normalized[field] as number) === 0) return false;
+      const val = s.normalized[field] as number | undefined;
+      if (val === undefined || val === null || isNaN(val)) return false;
+      if (skipZero && val === 0) return false;
       return true;
     });
     if (contributors.length === 0) return 0;

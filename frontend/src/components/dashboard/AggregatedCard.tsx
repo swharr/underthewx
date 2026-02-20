@@ -1,4 +1,5 @@
-import { Thermometer, Droplets, Wind, CloudRain, Sun } from "lucide-react";
+import type React from "react";
+import { Droplets, Wind, CloudRain, Sun } from "lucide-react";
 import { windDirection } from "../../lib/dateUtils";
 import type { HomeLocation } from "../../types/weather";
 

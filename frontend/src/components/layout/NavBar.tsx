@@ -1,3 +1,4 @@
+import type React from "react";
 import { Cloud, Sprout, BarChart2 } from "lucide-react";
 
 type Tab = "dashboard" | "charts" | "planting";
@@ -19,7 +20,7 @@ export function NavBar({ activeTab, onTabChange }: NavBarProps) {
       <div className="flex items-center gap-2">
         <Cloud className="h-6 w-6 text-sky-400" />
         <span className="font-bold text-lg tracking-tight">UnderTheWx</span>
-        <span className="text-xs text-gray-500 ml-1">Spanish Fork, UT · 4,623 ft</span>
+        <span className="text-xs text-gray-500 ml-1">Lindon, UT · 4,623 ft</span>
       </div>
       <div className="flex items-center gap-1">
         {tabs.map(({ id, label, Icon }) => (

@@ -47,6 +47,6 @@ export const HOME = {
   lat: 40.33307,
   lon: -111.72761,
   elevationFt: 4623,
-  label: "Home (Spanish Fork, UT)",
+  label: "Home (Lindon, UT)",
   zone: "6b-7a",
 };

@@ -21,21 +21,22 @@ export async function fetchWunderground(): Promise<StationReading> {
   const data = await res.json() as {
     observations: Array<{
       obsTimeUtc: string;
+      // These fields are top-level on the observation object, not in imperial{}
+      humidity: number | null;
+      winddir: number | null;
+      solarRadiation: number | null;
+      uv: number | null;
       imperial: {
         temp: number;
         dewpt: number;
-        humidity: number;
+        windSpeed: number;
+        windGust: number;
         pressure: number;
-        windspeed: number;
-        winddir: number;
-        windgust: number;
         precipRate: number;
         precipTotal: number;
         elev: number;
-        solarRadiation: number;
-        uv: number;
-        heatindex: number;
-        windchill: number;
+        heatIndex: number | null;
+        windChill: number | null;
       };
     }>;
   };
@@ -48,24 +49,24 @@ export async function fetchWunderground(): Promise<StationReading> {
   const imp = obs.imperial;
 
   const tempF = imp.temp;
-  const windMph = imp.windspeed;
+  const windMph = imp.windSpeed ?? 0;
   const feelsLikeF =
-    tempF >= 80 ? (imp.heatindex ?? tempF) : tempF <= 50 && windMph > 3 ? (imp.windchill ?? tempF) : tempF;
+    tempF >= 80 ? (imp.heatIndex ?? tempF) : tempF <= 50 && windMph > 3 ? (imp.windChill ?? tempF) : tempF;
 
   const reading: StationReading = {
     stationId: STATION_ID,
     timestamp: obs.obsTimeUtc,
     tempF,
     dewPointF: imp.dewpt,
-    humidity: imp.humidity,
+    humidity: obs.humidity ?? 0,
     pressureInHg: imp.pressure,
     windSpeedMph: windMph,
-    windDirDeg: imp.winddir,
-    windGustMph: imp.windgust,
+    windDirDeg: obs.winddir ?? 0,
+    windGustMph: imp.windGust ?? 0,
     precipRateInHr: imp.precipRate,
     precipTodayIn: imp.precipTotal,
-    solarWm2: imp.solarRadiation,
-    uvIndex: imp.uv,
+    solarWm2: obs.solarRadiation ?? 0,
+    uvIndex: obs.uv ?? 0,
     feelsLikeF,
     elevationFt: ELEVATION_FT,
     stale: false,

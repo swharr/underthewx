@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavBar } from "./components/layout/NavBar";
 import { StatusBar } from "./components/layout/StatusBar";
+import { Footer } from "./components/layout/Footer";
 import { WeatherDashboard } from "./components/dashboard/WeatherDashboard";
 import { WeatherChart } from "./components/charts/WeatherChart";
 import { PlantingCalendar } from "./components/planting/PlantingCalendar";
@@ -19,9 +20,7 @@ export default function App() {
         {tab === "charts" && <WeatherChart />}
         {tab === "planting" && <PlantingCalendar />}
       </main>
-      <footer className="text-center text-xs text-gray-700 py-3 border-t border-gray-900">
-        UnderTheWx · Spanish Fork, UT · 40.333°N 111.728°W · 4,623 ft ASL · Zone 6b-7a
-      </footer>
+      <Footer />
     </div>
   );
 }
