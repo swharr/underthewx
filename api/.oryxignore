@@ -1,0 +1,3 @@
+# Tell Oryx not to rebuild the API — we compile TypeScript in the workflow step
+# before the SWA deploy action runs, so dist/ is already present.
+dist/
