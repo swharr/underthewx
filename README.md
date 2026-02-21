@@ -1,8 +1,10 @@
 # UnderTheWx
 
-Hyper-local garden weather dashboard and planting calendar for Spanish Fork, UT.
+Hyper-local garden weather dashboard and planting calendar for Lindon, UT.
 
-Aggregates data from 4 weather stations, normalizes to home elevation (4,623 ft ASL), and provides planting recommendations based on actual weather + frost dates.
+Aggregates data from 4 weather stations, normalizes to home elevation (4,623 ft ASL, 40.33307°N 111.72761°W), and provides planting recommendations based on actual weather + frost dates.
+
+**→ [Technical Notes](TECHNICAL_NOTES.md)** — formulas, assumptions, and model details for the curious.
 
 ## Data Sources
 
